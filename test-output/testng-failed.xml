@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Test Suite]">
+  <test thread-count="5" name="test(failed)">
+    <classes>
+      <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC02_LoginFunctionality">
+        <methods>
+          <include name="loginfuntionVerfication_TC02"/>
+        </methods>
+      </class> <!-- com.NonKeyword_FutureReadyFramework.automation.testCases.TC02_LoginFunctionality -->
+      <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01_LoginFunctionality">
+        <methods>
+          <include name="loginfuntionVerfication_TC01"/>
+        </methods>
+      </class> <!-- com.NonKeyword_FutureReadyFramework.automation.testCases.TC01_LoginFunctionality -->
+    </classes>
+  </test> <!-- test(failed) -->
+</suite> <!-- Failed suite [Test Suite] -->

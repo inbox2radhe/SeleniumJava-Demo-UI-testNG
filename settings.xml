@@ -1,0 +1,205 @@
+<settings>
+    <localRepository>X:/MavenRepository/.m2/repository</localRepository>
+    <interactiveMode>true</interactiveMode>
+   <servers>
+	<server>
+		<id>nexus</id>
+		<username>3537141_nexus</username>
+		<password>5HmK8C8x1tdgTuSL</password>
+<!-- <password>4NGmBMLVAbRJnfkf</password> -->
+	</server>
+	<server>
+		<id>nexus2</id>
+		<username>admin</username>
+		<password>admin123</password>
+	</server>
+     <server>
+      <id>release</id>
+      <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASSWORD}</password>
+    </server>
+    <server>
+      <id>snapshot</id>
+      <username>${env.NEXUS_USER}</username>
+      <password>${env.NEXUS_PASSWORD}</password>
+    </server>
+</servers>
+	
+    <mirrors>
+	
+		<mirror>
+        <id>nexus</id>
+        <mirrorOf>central</mirrorOf>
+            <url>
+            https://nexus.prod.cloud.fedex.com:8443/nexus/repository/maven-central
+            </url>
+        </mirror>
+        <mirror>
+            <id>central</id>
+            <name>central</name>
+            <url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/maven-public/</url>
+            <mirrorOf>central</mirrorOf>
+        </mirror>
+		<mirror>
+        <id>corp-nexus-snapshots</id>
+        <name>Nexus snapshots</name>
+            <url>
+            https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-snapshots
+            </url>
+        <mirrorOf>corp-nexus-snapshots</mirrorOf>
+        </mirror>
+	
+		
+		
+        <mirror>
+        <id>corp-nexus-central</id>
+        <name>Nexus snapshots</name>
+            <url>
+            https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/central
+            </url>
+			<mirrorOf>corp-nexus-central</mirrorOf>  
+        </mirror>
+		
+		<mirror>
+        <id>corp-nexus-snapshots_2</id>
+        <name>Nexus snapshots</name>
+            <url>
+            https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-releases
+            </url>
+        <mirrorOf>corp-nexus-snapshots</mirrorOf>
+        </mirror>
+		
+		<mirror>
+        <id>corp-nexus-snapshots_3</id>
+        <name>Nexus snapshots</name>
+            <url>
+            https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-releases
+            </url>
+        <mirrorOf>corp-nexus-snapshots</mirrorOf>
+        </mirror>
+        
+        
+        
+        
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>default</id>
+            <repositories>
+                <repository>        
+                    <id>3537141-imservice</id>        
+                    <name>3537141-imservice</name>            
+                    <url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/</url>        
+                </repository>
+                <repository>
+                    <id>central</id>
+                    <url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/snapshot/</url>
+                    <releases><enabled>true</enabled></releases>
+                    <snapshots><enabled>true</enabled></snapshots>
+                </repository>
+        
+                <repository>
+                    <id>3534524-COMMON</id>
+                    <name>3534524-COMMON</name>
+                    <url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/3534524-COMMON/</url>
+                </repository>
+                    <repository>
+                    <id>fxg-snapshots</id>
+                        <url>
+                        https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-snapshots
+                        </url>
+                    <releases>
+                    <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                    <enabled>true</enabled>
+                    <updatePolicy>always</updatePolicy>
+                    </snapshots>
+                </repository>
+                
+                <repository>
+                    <id>corp-nexus-releases</id>
+                        <url>
+                        https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-releases
+                        </url>
+                    <releases>
+                    <enabled>true</enabled>
+                    <updatePolicy>always</updatePolicy>
+                    </releases>
+                    <snapshots>
+                    <enabled>false</enabled>
+                    </snapshots>
+                </repository>
+
+                <repository>
+                <id>corp-nexus-central</id>
+                    <url>
+                    https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/central
+                    </url>
+                    <releases>
+                        <enabled>false</enabled>
+                    </releases>
+                    <snapshots>
+                    <enabled>false</enabled>
+                </snapshots>
+                </repository>
+
+            </repositories>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>corp-nexus-central</id>
+                    <url>
+                        https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/central
+                    </url>
+                </pluginRepository>
+                
+                <pluginRepository>
+                    <id>corp-nexus-releases</id>
+                    <url>
+                    https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/fxg-releases
+                    </url>
+                </pluginRepository>
+                
+            </pluginRepositories>
+        </profile>
+    </profiles>
+
+    <proxies>
+  
+    <proxy>
+      <id>fedex-http</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>internet.proxy.fedex.com</host>
+      <port>3128</port>
+	  <nonProxyHosts>localhost|*.fedex.com</nonProxyHosts>
+    </proxy>
+    
+    
+	<proxy>
+      <id>fedex-https</id>
+      <active>true</active>
+      <protocol>https</protocol>
+      <host>internet.proxy.fedex.com</host>
+      <port>3128</port>
+	  <nonProxyHosts>localhost|*.fedex.com</nonProxyHosts>
+    </proxy>
+    
+	
+    <proxy>
+        <id>optional</id>
+        <active>true</active>
+        <protocol>http</protocol>
+        <host>east.proxy.fedex.com</host>
+        <port>3128</port>
+      <nonProxyHosts>localhost|*.fedex.com</nonProxyHosts>
+    </proxy>   
+	  
+	  
+  </proxies>
+
+    <activeProfiles>
+        <activeProfile>default</activeProfile>
+    </activeProfiles>
+</settings>

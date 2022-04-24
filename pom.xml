@@ -1,0 +1,332 @@
+  <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.NonKeyword_FutureReadyFramework</groupId>
+  <artifactId>NonKeyword_FutureReadyFramework</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>NonKeyword_FutureReadyFramework</name>
+  <url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/central/</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>3.8.1</version>
+			<scope>test</scope>
+		</dependency>
+
+<dependency>
+  <groupId>org.apache.poi</groupId>
+  <artifactId>poi-ooxml</artifactId>
+  <version>3.8</version>
+</dependency>
+<dependency>
+  <groupId>commons-io</groupId>
+  <artifactId>commons-io</artifactId>
+  <version>2.6</version>
+  <type>pom</type>
+</dependency>
+
+<dependency>
+  <groupId>com.paulhammant</groupId>
+  <artifactId>ngwebdriver</artifactId>
+  <version>1.1.4</version>
+</dependency> 
+<!--<dependency>
+  <groupId>eai7330.com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>3.1.5</version>
+</dependency> -->
+
+<dependency>
+  <groupId>com.aventstack</groupId>
+  <artifactId>extentreports</artifactId>
+  <version>5.0.4</version>
+</dependency>
+
+		
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.78</version>
+			<type>pom</type>
+		</dependency>
+
+		
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.4.0</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		
+
+
+		<!-- 
+		
+		<dependency>
+  <groupId>org.apache.maven.surefire</groupId>
+  <artifactId>surefire-testng</artifactId>
+  <version>2.14.1</version>
+  <type>pom</type>
+</dependency>
+
+
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+			<type>pom</type>
+		</dependency>
+
+		<dependency>
+			<groupId>TestNG</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.0</version>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>7.5</version>
+			<scope>compile</scope>
+		</dependency>
+		
+		-->
+
+		<!--<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.8</version>
+			<type>pom</type>
+		</dependency> -->
+
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>3.4.0</version>
+			<type>pom</type>
+		</dependency>
+		
+		<dependency>
+  <groupId>org.apache.maven.surefire</groupId>
+  <artifactId>surefire-testng</artifactId>
+  <version>2.22.0</version>
+  <type>pom</type>
+</dependency>
+
+		<!-- <dependency>
+  <groupId>io.github.bonigarcia</groupId>
+  <artifactId>webdrivermanager</artifactId>
+  <version>3.4.0</version>
+  <type>pom</type>
+</dependency>-->
+
+
+		<dependency>
+			<groupId>io.github.bonigarcia</groupId>
+			<artifactId>webdrivermanager</artifactId>
+			<version>5.0.3</version>
+		</dependency>
+
+		<!--<dependency>
+  <groupId>eai7330.org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>3.13.0</version>
+  <type>pom</type>
+</dependency>
+		 -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.2</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- Lombok Logging -->
+		<dependency>
+			<groupId>eai3535385.org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.12</version>
+			<type>pom</type>
+		</dependency>
+
+		<!--<dependency>
+  <groupId>io.github.bonigarcia</groupId>
+  <artifactId>webdrivermanager</artifactId>
+  <version>5.0.3</version>
+  <type>pom</type>
+</dependency> -->
+
+
+		<!-- Lombok Logging -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.22</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.2.10</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>net.logstash.logback</groupId>
+			<artifactId>logstash-logback-encoder</artifactId>
+			<version>6.1</version>
+		</dependency>
+		<!-- EDGE -->
+		<!-- <dependency>
+			<groupId>eai3535146.com.fedex.esi.edge.common</groupId>
+			<artifactId>esi-edge-common-util-starter</artifactId>
+			<version>${esi-edge-common-util-starter.version}</version>
+			<exclusions>
+				<exclusion>
+					<groupId>com.fedex.framework</groupId>
+					<artifactId>
+						security-server-authentication
+					</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		-->
+	</dependencies>
+
+	<build>
+		<plugins>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<!-- 
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>versions-maven-plugin</artifactId>
+			</plugin>
+			
+			-->
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.7</version>
+				<executions>
+					<execution>
+						<id>default-prepare-agent</id>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>default-report</id>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			
+			<!-- <plugin> <artifactId>maven-surefire-plugin</artifactId> </plugin> -->
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>https://repo.spring.io/libs-milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>snapshots</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/snapshot/</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>releases</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/release/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>redux</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/redux/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>fedex-jms</id>
+			<name>FedEx JMS</name>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/3535157-FedexJmsDecorator</url>
+		</repository>
+		<!-- nexus staging repo -->
+		<repository>
+			<id>nexus-staging</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/staging</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/content/repositories/central/</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/snapshot/</url>
+		</snapshotRepository>
+		<repository>
+			<id>releases</id>
+			<url>https://nexus.prod.cloud.fedex.com:8443/nexus/repository/release/</url>
+		</repository>
+	</distributionManagement>
+
+</project>
