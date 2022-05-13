@@ -1,4 +1,4 @@
-/* Name: TC02_LoginFunctionality Script 
+/* Name: TC01_LoginFunctionality Script 
  * Description: This script is used to check the Login Functionality
  * Developed By: Chyne Chandran
  * Automation Architect: Jayant Naikwade
@@ -17,16 +17,16 @@ import org.testng.annotations.Test;
 import com.NonKeyword_FutureReadyFramework.automation.application.LoginPage;
 import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
+
 @Listeners(ListenTest.class)
 public class TC02_LoginFunctionality extends BaseClass {
 
-	
-	@Test
-	public void loginfuntionVerfication_TC02() throws IOException{
-		
+	@Test(enabled = true)
+	public void loginfuntionVerfication_TC02() throws IOException, InterruptedException {
+
 		LoginPage loginPage = new LoginPage();
-		loginPage.loginFuction_DMT();
-		
+		loginPage.pickUp_CC();
+
 	}
 
 }
