@@ -22,10 +22,11 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 public class TC01_LoginFunctionality extends BaseClass {
 
 	@Test(enabled = true)
-	public void loginfuntionVerfication_TC01() throws IOException {
+	public void loginfuntionVerfication_TC01() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
-		loginPage.loginFuction_DMT();
+		loginPage.shipping_CC();
+		
 
 	}
 
