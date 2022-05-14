@@ -36,7 +36,7 @@ public class ExcelUtils {
 
 		String path = System.getProperty("user.dir");
 		testDataSheetPath = (path
-				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//data//TestData.xlsx");
 
 		List<String> list = new ArrayList<String>();
 		File f = new File(testDataSheetPath);
@@ -105,7 +105,7 @@ public class ExcelUtils {
 	public static String excelreadBrowser() throws IOException {
 
 		testConfigSheetPath = (System.getProperty("user.dir")
-				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Config.xlsx");
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
 		File f = new File(testConfigSheetPath);
 		FileInputStream fis = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fis);
@@ -130,7 +130,7 @@ public class ExcelUtils {
 	public static String excelreadURL() throws IOException {
 
 		testConfigSheetPath = (System.getProperty("user.dir")
-				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Config.xlsx");
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
 		File f = new File(testConfigSheetPath);
 		FileInputStream fis = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fis);
@@ -154,7 +154,7 @@ public class ExcelUtils {
 	public static String excelreadUserName() throws IOException {
 
 		testConfigSheetPath = (System.getProperty("user.dir")
-				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Config.xlsx");
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
 		File f = new File(testConfigSheetPath);
 		FileInputStream fis = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fis);
@@ -179,7 +179,7 @@ public class ExcelUtils {
 	public static String excelreadPassword() throws IOException {
 
 		testConfigSheetPath = (System.getProperty("user.dir")
-				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Config.xlsx");
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
 		File f = new File(testConfigSheetPath);
 		FileInputStream fis = new FileInputStream(f);
 		Workbook wb = new XSSFWorkbook(fis);
