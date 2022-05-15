@@ -69,6 +69,7 @@ public class LoginPage extends BaseClass {
 		System.out.println("Switching to the iframe");
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
 		String path = System.getProperty("user.dir");
+		System.out.println(path);
 		upload.sendKeys(path + "src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//01142022payslip.pdf"); // Uploading the file using sendKeys
 		System.out.println("File is Uploaded Successfully");
 		Thread.sleep(10000);
