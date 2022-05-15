@@ -68,7 +68,8 @@ public class LoginPage extends BaseClass {
 		// driver.switchTo().frame("iframe#fedex_iframe");
 		System.out.println("Switching to the iframe");
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
-		upload.sendKeys("C:\\Users\\3818600\\01142022payslip.pdf"); // Uploading the file using sendKeys
+		String path = System.getProperty("user.dir");
+		upload.sendKeys(path + "src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//01142022payslip.pdf"); // Uploading the file using sendKeys
 		System.out.println("File is Uploaded Successfully");
 		Thread.sleep(10000);
 		expwaitClickable(or.addtocart);
