@@ -105,6 +105,7 @@ public class ExcelUtils {
 	public static String excelreadBrowser() throws IOException {
 
 		testConfigSheetPath = (System.getProperty("user.dir")
+		System.out.println(testConfigSheetPath);
 				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
 		File f = new File(testConfigSheetPath);
 		FileInputStream fis = new FileInputStream(f);
