@@ -106,33 +106,14 @@ public class LoginPage extends BaseClass {
 			Thread.sleep(20000);
 			expwaitVisibility(driver.findElement(By.xpath("//div[text()='Delivery methods']")));
 			Thread.sleep(20000);
-			clickelement(or.fedexlocaldelivery);
-			Thread.sleep(20000);
-			expwaitClickable(or.continuetopaymentbutton);
-			clickelement(or.continuetopaymentbutton);
-			Thread.sleep(10000);
-	//Payment screen
-	expwaitVisibility(driver.findElement(By.xpath("//div[@class='payment-container']//div[@class='method-selection-container']")));
-	//Credit card info
-		clickelement(or.selectcc);
-		expwaitClickable(or.nameoncard);
-		inputtext(or.nameoncard,"Test User");
-		inputtext(or.cardno,"4111111111111111");
-		Select month = new Select(driver.findElement(By.xpath("//select[@class='expiration-month']")));
-			month.selectByVisibleText("5 - May");
-			Select year = new Select(driver.findElement(By.xpath("//select[@class='expiration-year']")));
-			year.selectByVisibleText("2026");
-		inputtext(or.cvv,"111");
-		Thread.sleep(2000);
-		clickelement(or.cc_reviewbutton);
-		Thread.sleep(10000);
-		clickelement(or.terms_condition_checkbox);
-		clickelement(or.submitorder_button);
-		Thread.sleep(10000);
-		expwaitVisibility(or.ordergtn);
-		Thread.sleep(10000);
-		System.out.println(or.ordergtn.getText());
-		Thread.sleep(10000);
+			try {
+			clickelement(or.fedexfirstovernight);
+			System.out.println("[Shipping Options]" + "Available");
+		} catch (Exception e) {
+			System.err.println("[Shipping Options]" + "Not Available");
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+		
 		driver.close();
 		
 	}
