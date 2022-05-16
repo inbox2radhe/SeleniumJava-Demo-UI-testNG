@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.NonKeyword_FutureReadyFramework.automation.excelReader.ExcelUtils;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static WebDriver driver;
