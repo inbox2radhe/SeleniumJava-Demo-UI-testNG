@@ -58,10 +58,12 @@ public class LoginPage extends BaseClass {
 //		clickelement(or.submitbtn);
 		expwaitClickable(or.selectProduct);
 		clickelement(or.selectProduct);
+		System.out.println("PostCards Product Selected")
 		
 		//Uploading file
 		clickelement(or.uploadbutton);
 		Thread.sleep(20000);
+		System.out.println("Upload button clicked")
 		int size = driver.findElements(By.tagName("iframe")).size();
 		System.out.println(size);
 		driver.switchTo().frame(0);
@@ -76,15 +78,19 @@ public class LoginPage extends BaseClass {
 		expwaitClickable(or.addtocart);
 		clickelement(or.addtocart);
 		Thread.sleep(20000);
+		System.out.println("Clicked on addtoCart button")
 		//expwaitVisibility(driver.findElement(By.xpath("//tr[@class='grand totals']//strong")));
 		//expwaitClickable(or.proceedtocheckout);
 		clickelement(or.proceedtocheckout);
 		Thread.sleep(10000);
+		System.out.println("Clicked on proceedToCheckout buton")
 		clickelement(or.continueasguest_popup);
 		Thread.sleep(20000);
+		System.out.println("Clicked on Guest User")
 		expwaitVisibility(or.shiptoaddress_selectionbutton);
 			Thread.sleep(10000);
 			clickelement(or.shiptoaddress_selectionbutton);
+			System.out.println("Clicked on shipping button")
 			inputtext(or.shippingaddress_fname, "Giribabu");
 			inputtext(or.shippingaddress_lname, "Kristamsetty");
 			inputtext(or.shippingaddress_email, "giribabu.kristamsetty.osv@fedex.com");
