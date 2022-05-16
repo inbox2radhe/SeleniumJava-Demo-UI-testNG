@@ -27,7 +27,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.NonKeyword_FutureReadyFramework.automation.excelReader.ExcelUtils;
 
- import io.github.bonigarcia.wdm.WebDriverManager;
+// import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static WebDriver driver;
@@ -37,8 +37,8 @@ public class BaseClass {
 		String browsername = ExcelUtils.excelreadBrowser();
 		if (browsername.equalsIgnoreCase("CHROME")) {
 			try {
-				WebDriverManager.chromedriver().setup();
-			   // System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
+			//	WebDriverManager.chromedriver().setup();
+			   // System.setProperty("webdriver.chrome.driver", "C:\Program Files\Google\Chrome\Application\chrome.exe");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched maximized successfully");
@@ -47,7 +47,7 @@ public class BaseClass {
 			}
 		} else if (browsername.equalsIgnoreCase("FIREFOX")) {
 			try {
-				WebDriverManager.firefoxdriver().setup();
+			//	WebDriverManager.firefoxdriver().setup();
 				driver = new FirefoxDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched and maximized successfully");
@@ -58,7 +58,7 @@ public class BaseClass {
 
 		else if (browsername.equalsIgnoreCase("EDGE")) {
 			try {
-				WebDriverManager.edgedriver().setup();
+			//	WebDriverManager.edgedriver().setup();
 				driver = new EdgeDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched and maximized successfully");
@@ -69,7 +69,7 @@ public class BaseClass {
 
 		else if (browsername.equalsIgnoreCase("IE")) {
 			try {
-				WebDriverManager.iedriver().setup();
+			//	WebDriverManager.iedriver().setup();
 				driver = new InternetExplorerDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched and maximized successfully");
