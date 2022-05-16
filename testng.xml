@@ -6,12 +6,9 @@
 <listener class-name="com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest"/>
 </listeners>
 
-  <test thread-count="5" name="Test">
+  <test thread-count="1" name="Test">
     <classes>
       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01_LoginFunctionality"/>
-      <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC02_LoginFunctionality"/>
-      <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC03_LoginFunctionality"/>
-       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC04_LoginFunctionality"/>
        </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
