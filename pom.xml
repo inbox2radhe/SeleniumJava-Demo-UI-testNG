@@ -140,6 +140,21 @@
 			<version>5.0.3</version>
 		</dependency>
 
+		<!--<dependency>
+  <groupId>eai7330.org.seleniumhq.selenium</groupId>
+  <artifactId>selenium-java</artifactId>
+  <version>3.13.0</version>
+  <type>pom</type>
+</dependency>
+		 -->
+		<dependency>
+			<groupId>org.apache.logging.log4j</groupId>
+			<artifactId>log4j-slf4j-impl</artifactId>
+			<version>2.2</version>
+			<type>pom</type>
+		</dependency>
+
+		<!-- Lombok Logging -->
 		<dependency>
 			<groupId>eai3535385.org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
@@ -147,14 +162,21 @@
 			<type>pom</type>
 		</dependency>
 
+		<!--<dependency>
+  <groupId>io.github.bonigarcia</groupId>
+  <artifactId>webdrivermanager</artifactId>
+  <version>5.0.3</version>
+  <type>pom</type>
+</dependency> -->
 
+
+		<!-- Lombok Logging -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<version>1.18.22</version>
 			<scope>provided</scope>
 		</dependency>
-		
 		<dependency>
 			<groupId>ch.qos.logback</groupId>
 			<artifactId>logback-classic</artifactId>
