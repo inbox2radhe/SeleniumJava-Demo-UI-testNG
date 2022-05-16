@@ -37,7 +37,8 @@ public class BaseClass {
 		String browsername = ExcelUtils.excelreadBrowser();
 		if (browsername.equalsIgnoreCase("CHROME")) {
 			try {
-				WebDriverManager.chromedriver().setup();
+			//	WebDriverManager.chromedriver().setup();
+			    System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched maximized successfully");
