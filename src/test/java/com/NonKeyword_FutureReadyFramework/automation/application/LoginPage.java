@@ -83,7 +83,7 @@ public class LoginPage extends BaseClass {
 		//expwaitClickable(or.proceedtocheckout);
 		clickelement(or.proceedtocheckout);
 		Thread.sleep(10000);
-		System.out.println("Clicked on proceedToCheckout buton")
+		System.out.println("Clicked on proceedToCheckout buton");
 		clickelement(or.continueasguest_popup);
 		Thread.sleep(20000);
 		System.out.println("Clicked on Guest User");
