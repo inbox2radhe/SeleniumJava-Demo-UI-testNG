@@ -38,7 +38,7 @@ public class BaseClass {
 		if (browsername.equalsIgnoreCase("CHROME")) {
 			try {
 			//	WebDriverManager.chromedriver().setup();
-			   // System.setProperty("webdriver.chrome.driver", "C:\Program Files\Google\Chrome\Application\chrome.exe");
+			    System.setProperty("webdriver.chrome.driver", "C:\Program Files\Google\Chrome\Application\chrome.exe");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched maximized successfully");
