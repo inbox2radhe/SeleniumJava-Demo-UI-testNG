@@ -1,6 +1,6 @@
 <settings>
-    <localRepository>X:/MavenRepository/.m2/repository</localRepository>
-    <interactiveMode>true</interactiveMode>
+    <!--<localRepository>X:/MavenRepository/.m2/repository</localRepository>-->
+    <!--<interactiveMode>true</interactiveMode>-->
    <servers>
 	<server>
 		<id>nexus</id>
