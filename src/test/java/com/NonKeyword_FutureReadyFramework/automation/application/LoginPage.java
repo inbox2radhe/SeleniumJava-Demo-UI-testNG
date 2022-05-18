@@ -104,9 +104,8 @@ public class LoginPage extends BaseClass {
 			Thread.sleep(10000);
 			clickelement(or.shipingresult_button);
 			Thread.sleep(20000);
-			expwaitVisibility(driver.findElement(By.xpath("//div[text()='Delivery methods']")));
-			Thread.sleep(20000);
 			try {
+			expwaitVisibility(driver.findElement(By.xpath("//div[text()='Delivery methods']")));
 			clickelement(or.fedexfirstovernight);
 			System.out.println("[Shipping Options]" + "Available");
 		} catch (Exception e) {
