@@ -111,9 +111,9 @@ public class LoginPage extends BaseClass {
 		} catch (Exception e) {
 			System.err.println("[Shipping Options]" + "Not Available");
 			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
-			driver.close();
+			
 		}
-	
+	driver.close();
 	}
 
 	}
