@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -24,21 +25,23 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 
 import com.NonKeyword_FutureReadyFramework.automation.excelReader.ExcelUtils;
 
- import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
 
+	
 	public static void launchBrowser() throws IOException {
 		String browsername = ExcelUtils.excelreadBrowser();
 		if (browsername.equalsIgnoreCase("CHROME")) {
 			try {
 				WebDriverManager.chromedriver().setup();
-			   // System.getProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\chromeDriver\\chromedriver.exe");
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
 				System.out.println("[PASSED]" + browsername + "browser launched maximized successfully");
@@ -119,18 +122,35 @@ public class BaseClass {
 	}
 
 	public void impwait() throws InterruptedException {
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 
 	public void expwaitVisibility(WebElement webelementref) {
-		wait = new WebDriverWait(driver, 30);
+		wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.visibilityOf(webelementref));
 	}
 
 	public void expwaitClickable(WebElement webelementref) {
-		wait = new WebDriverWait(driver, 30);
+		wait = new WebDriverWait(driver, 60);
 		wait.until(ExpectedConditions.elementToBeClickable(webelementref));
 	}
+	
+	public void windowScroll() {
+		JavascriptExecutor js = (JavascriptExecutor)driver;
+		js.executeScript("window.scrollBy(0,500)","");
+	}
+	
+	public void waitSync() throws InterruptedException {
+		Thread.sleep(10000);
+	}
+	
+	
+	public void tearDown()
+	{
+		driver.manage().deleteAllCookies();
+		driver.close();
+	}
+
 
 }
