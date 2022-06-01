@@ -9,11 +9,16 @@
  */
 package com.NonKeyword_FutureReadyFramework.automation.objectRepository;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 
 public class ObjectRepository_LoginPage {
+	
+	List<WebElement> shippingMethods;
 
 	
 	@FindBy(xpath = "//a[text()='User Profile ']")
@@ -35,9 +40,19 @@ public class ObjectRepository_LoginPage {
 	public WebElement submitbtn;
 	
 	//select product
-	//@FindBy(xpath = "(//div[@class='products-grid grid']//strong[@class='product-item-name']//a[@title='Flyers'])[1]")
+	@FindBy(how =How.ID, using="search")
+	public WebElement searchbtn;
+	
+	@FindBy(xpath="//*[@class='action search p-0]")
+	public WebElement clicksearch;
+	
+	@FindBy(xpath="//*[@id='product-item-info_13685']/a/span/span/img")
+	public WebElement clickflyers;
+	
+	@FindBy(xpath = "(//div[@class='products-grid grid']//strong[@class='product-item-name']//a[@title='Flyers'])[1]")
+	public WebElement selectflyers;
 	@FindBy(xpath = "(//div[@class='products-grid grid']//strong[@class='product-item-name']//a[@title='Postcards'])[1]")
-	public WebElement selectProduct;
+	public WebElement selectpostCards;
 	@FindBy(css="button#upload-a-file-button")
 	public WebElement uploadbutton;
 	
@@ -45,7 +60,7 @@ public class ObjectRepository_LoginPage {
 	public WebElement addtocart;
 	@FindBy(xpath ="//button[@title='Go To Checkout']")
 	public WebElement proceedtocheckout;
-	@FindBy(how =How.ID, using = "checkout-continue-guest")
+	@FindBy(how =How.ID, using = "checkout-continue-guest")// //*[@id="checkout-continue-guest"]/a
 	public WebElement continueasguest_popup;
 	@FindBy(xpath ="//button[@class='anchor-pickup']")
 	public WebElement pickupstore_selectionbutton;
@@ -102,9 +117,10 @@ public class ObjectRepository_LoginPage {
 	public WebElement alternate_mail;
 
 	//Payment Screen
-	@FindBy(xpath ="//div[@class='select-credit-card']")
+	@FindBy(xpath ="//div[@class='select-credit-card pointer']") ////*[@id="step_code"]/div[3]/div[1]/div[1]
 	public WebElement selectcc; 
-	@FindBy(xpath ="//div[@class='select-fedex-acc']")
+	//@FindBy(xpath ="//div[@class='select-fedex-acc']")//Stage FedEx acc xpath
+	@FindBy(xpath="//div[@class='select-fedex-acc pointer']") //Prod FedEx acc xpath
 	public WebElement selectfedexacc; 
 
 	//CCFlow
@@ -124,6 +140,8 @@ public class ObjectRepository_LoginPage {
 	public WebElement fedexacc;
 	@FindBy(xpath = "//button[@class='fedex-account-number-review-button']")
 	public WebElement fedexacc_revieworder;
+	//@FindBy(xpath="//button[@class='credit-card-review-button']")
+	//public WebElement cc_revieworder_Prod;
 	
 	//Billing Address
 	@FindBy(how =How.ID, using ="company-name")
@@ -140,8 +158,9 @@ public class ObjectRepository_LoginPage {
 	public WebElement ndcAcc;
 	@FindBy(xpath ="//button[@class='apply-account']")
 	public WebElement ndcAcc_applybutton;
-	@FindBy(xpath = "//button[@class='credit-card-review-button']")
-	public WebElement cc_reviewbutton;
+	@FindBy(xpath = "//button[@class='credit-card-review-button']")// credit-card-review-button
+	 //@FindBy(xpath="//button[text()='REVIEW ORDER'][1]")
+	 public WebElement cc_reviewbutton;
 
 	
 
@@ -152,11 +171,15 @@ public class ObjectRepository_LoginPage {
 	public WebElement fedexshippingaccno;
 	@FindBy(how =How.ID, using ="addFedExAccountNumberButton")
 	public WebElement fedexshippingaccno_applybutton;
-	@FindBy(xpath ="//*[@class='button action continue primary create_quote']")
+	@FindBy(xpath ="//*[@class='place-pickup-order']")////*[@id="shipping-method-buttons-container"]/div/button
+	public WebElement pickupFlowcontinueTopaybtn;
+	@FindBy(xpath="//button[@class='button action continue primary create_quote']") //continue to payment Prod
 	public WebElement continuetopaymentbutton;
-	@FindBy(xpath ="//button//span[text()='CONTINUE TO PAYMENT']")
-	public WebElement continuetopaymentbuttonPickup;
 	
+	//Delivery Methods
+	@FindBy(xpath="//div[text()='Delivery methods']")
+	public WebElement deliveryMethods;
+
 	//Delivery Methods(Dynamic xpath)
 	@FindBy(xpath ="//input[@type='radio']/../..//td[@class='col col-carrier']//span[text()='FedEx Ground US']")
 	public WebElement groundus;
@@ -172,6 +195,22 @@ public class ObjectRepository_LoginPage {
 	public WebElement fedexpriorityovernight;
 	@FindBy(xpath ="//input[@type='radio']/../..//td[@class='col col-carrier']//span[text()='FedEx First Overnight']")
 	public WebElement fedexfirstovernight;
+	
+	public List<WebElement> shipppingOptions(){
+		
+		shippingMethods= new ArrayList<WebElement>();
+		
+		shippingMethods.add(groundus);
+		shippingMethods.add(fedexlocaldelivery);
+		shippingMethods.add(fedexexpresssaver);
+		shippingMethods.add(fedex2day);
+		shippingMethods.add(fedexstandardovernight);
+		shippingMethods.add(fedexpriorityovernight);
+		shippingMethods.add(fedexfirstovernight);
+	
+		return shippingMethods;
+		
+	}
 	
 	
 	//Review Order screen
