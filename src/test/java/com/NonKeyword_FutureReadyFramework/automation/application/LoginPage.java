@@ -95,8 +95,9 @@ public class LoginPage extends BaseClass {
 		waitSync();
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
 		waitSync();
+		upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\01142022payslip.pdf");
 		//upload.sendKeys("X:\\Upload_Files\\"+tocSheet.getRow(row).getCell(4).getStringCellValue()); // Uploading the file using sendKeys
-		upload.sendKeys("C:\\Users\\4652497\\TEST FILE.pdf");
+		//upload.sendKeys("C:\\Users\\4652497\\TEST FILE.pdf");
 		waitSync();
 		System.out.println("File is Uploaded Successfully");
 		waitSync();
