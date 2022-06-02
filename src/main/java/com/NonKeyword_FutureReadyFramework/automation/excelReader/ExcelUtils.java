@@ -30,6 +30,7 @@ public class ExcelUtils {
 	public static String passwordCellValue;
 	public static String urlCellValue;
 	public static String browserCellValue;
+	public Integer rowValue;
 
 	// ******READING CLASS WITH FLAG STATUS "Y"*****
 	public static List<String> excelReadTestCase() throws IOException {
