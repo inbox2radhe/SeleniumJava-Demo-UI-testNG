@@ -100,6 +100,61 @@ public class ExcelUtils {
 		return list;
 
 	}
+	
+	
+		// *******READING ROW VALUES ********
+	public int excelReadTestCaseRowNo(String ExpectedTCid) throws IOException {
+
+		String path = System.getProperty("user.dir");
+		testDataSheetPath = (path
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//data//TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("TOC");
+		int numberOfRows = tocSheet.getPhysicalNumberOfRows();
+		
+		for (int i = 1; i < numberOfRows; i++) {
+
+			Row datarow = tocSheet.getRow(i);
+			Cell flagstatuscell = datarow.getCell(2);
+			String flagstatuscellValuestr = flagstatuscell.getStringCellValue();
+
+			if (flagstatuscellValuestr.equalsIgnoreCase("Y")) {
+				Cell descriptionCell = datarow.getCell(1);
+				String descriptionCellValuestr = descriptionCell.getStringCellValue();
+
+				if (descriptionCellValuestr.equalsIgnoreCase("Sanity")) {
+					Sheet sanitySheet = wb.getSheet("Sanity");
+					int sanityNumberOfRows = sanitySheet.getPhysicalNumberOfRows();
+					String packageCellValue = sanitySheet.getRow(0).getCell(2).getStringCellValue();
+					for (int j = 2; j < sanityNumberOfRows; j++) {
+						Row sanitySheetrow = sanitySheet.getRow(j);
+						Cell sanityflagstatuscell = sanitySheetrow.getCell(2);
+						String sanityflagstatuscellValuestr = sanityflagstatuscell.getStringCellValue();
+						
+						String sanityTestcaseId = sanitySheetrow.getCell(1).getStringCellValue();
+						if (sanityflagstatuscellValuestr.equalsIgnoreCase("Y") && sanityTestcaseId.equalsIgnoreCase(ExpectedTCid)) {
+							rowValue = j;
+
+						}
+					}
+
+				}
+
+				
+
+			}
+
+			
+			
+		}
+
+		return rowValue;
+
+	}
 
 	// ********READING BROWSER VALUE**********
 	public static String excelreadBrowser() throws IOException {
