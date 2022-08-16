@@ -363,7 +363,22 @@ return updatecardtxt;
 		clickelement(driver.findElement(By.xpath("//input[@type='radio']/../..//td[@class='col col-carrier']//span[text()='"+deliveryMethod+"']")));
 
 
-
-
 		}
+	public void loginIntoMagento() throws IOException, InterruptedException {
+	    ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+		waitSync();
+		
+		try {
+			expwaitVisibility(or.username);
+			System.out.println("[PASSED]" + "Showing Login screen");
+		} catch (Exception e) {
+			throw new RuntimeException("[FAILED] Not showing Login screen");
+		}
+		inputtext(or.username, ExcelUtils.excelreadUserName());
+		inputtext(or.password, ExcelUtils.excelreadPassword());
+		clickelement(or.submitbtn);
+		waitSync();
+
+}
 }

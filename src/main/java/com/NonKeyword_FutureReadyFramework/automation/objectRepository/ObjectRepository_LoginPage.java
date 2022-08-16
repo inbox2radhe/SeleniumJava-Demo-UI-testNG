@@ -58,8 +58,8 @@ public class ObjectRepository_LoginPage {
 	
 	@FindBy(xpath ="//button//span[text()='Add To Cart']")
 	public WebElement addtocart;
-	@FindBy(xpath ="//button[@title='Go To Checkout']")
-	public WebElement proceedtocheckout;
+	@FindBy(xpath ="(//button[@title='Go To Checkout'])[2]")
+    public WebElement proceedtocheckout;
 	@FindBy(how =How.ID, using = "checkout-continue-guest")// //*[@id="checkout-continue-guest"]/a
 	public WebElement continueasguest_popup;
 	@FindBy(xpath ="//button[@class='anchor-pickup']")
@@ -426,6 +426,27 @@ public class ObjectRepository_LoginPage {
 
     @FindBy(xpath="(//label[@class='radio-button-layout no-select'])[2]//div[@class='radio-container']")
     public WebElement radiobtn_notecard;
+   
+    @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Corrugated Plastic Sign')]")
+    public WebElement select_Corrugated_Plastic_Sign;
+    
+    @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Metal Sign')]")
+    public WebElement Select_Metal_Sign;
+    //Yard Sign
+   @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Yard Sign')]")
+   public WebElement select_Yard_sign;
+ //FCL Checkout Login popup
+ 	@FindBy(how = How.CSS, using = "div#fcl-checkout-login-popup a.btn-popup-login span.span-popup-login")
+ 	public WebElement checkout_Loginbutton;
+ 	@FindBy(xpath = "//div[@id='fcl-checkout-login-popup']//span[@class='span-popup-create-user']")
+ 	public WebElement checkout_CreateUserId;
+ 	
+ 	
+ 	//change to pickup to shipping and vice versa
+ 	@FindBy(xpath = "//a[@class='checkout-sub' and contains(text(),'CHANGE TO SHIPPING')]")
+ 	public WebElement changeToShipping;
+ 	@FindBy(xpath = "//a[@class='checkout-sub' and contains(text(),'CHANGE TO PICK UP IN STORE')]")
+ 	public WebElement changeToPickup;
 
 
 

@@ -9,72 +9,76 @@
 <!-- 	 <test thread-count="5" name="Test" parallel="true" preserve-order="true" verbose="1"> -->
 	 
 	       <test thread-count="5" name="Test"  verbose="2" >
-		   <classes> 
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpCCFlow"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overnight_FedAccFlow"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_GroundUS_CCFlow"/> -->
-		      
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_update_order"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01"/>  -->
-<!-- 	       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC02"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC03"/> -->
-<!-- 	       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC04"/>  -->
+<classes> 
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpCCFlow"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overnight_FedAccFlow"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_GroundUS_CCFlow"/>
+		 
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_update_order"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01"/> 
+	       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC02"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC03"/>
+	       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC04"/> 
  		  
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC10"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC11"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC12"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC13"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC14"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC15"/> -->
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC10"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC11"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC12"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC13"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC14"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC15"/>
 		   
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC16"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC17"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC18"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC19"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC20"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC21"/> -->
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC16"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC17"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC18"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC19"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC20"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC21"/>
 		   
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC22"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC23"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC24"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC25"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC26"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC27"/> -->
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC22"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC23"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC24"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC25"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC26"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC27"/>
 		   
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC28"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC29"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC30"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC31"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC32"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC33"/>	 -->
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC28"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC29"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC30"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC31"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC32"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC33"/>	
 		   
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC34"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC35"/> -->
-<!-- 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NDC_Acc_Flow"/> -->
-<!-- <!--           <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Canvaflow"/> --> -->
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC34"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC35"/>
+		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NDC_Acc_Flow"/>
+<!--           <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Canvaflow"/> -->
      
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_BusinessCards_Preminum_flow_CC"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_BusinessCards_Preminum_flow_FedExAcc"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PPT_flow_CC"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PPT_flow_FedExAcc"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_PickUp_CC"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_PickUp_FedexAcc"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_Shipping_CC"/> -->
-<!--                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_Shipping_FedexAcc"/> -->
-<!--                     <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Pickup_CC"/> -->
-<!--                     <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Shipping_FedexAcc"/> -->
-<!--                     <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Pickup_CC"/> -->
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_BusinessCards_Preminum_flow_CC"/>
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_BusinessCards_Preminum_flow_FedExAcc"/>
+     
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_PickUp_FedexAcc"/>
+                    <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PPT_flow_CC"/> -->
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PPT_flow_FedExAcc"/>
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_PickUp_CC"/>        <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_Shipping_CC"/> -->
+                <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Outdoor_Banners_Shipping_FedexAcc"/>
+                    <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Pickup_CC"/>
+                    <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Shipping_FedexAcc"/>
+                    <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Pickup_CC"/>
 
-<!--                          <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Shipping_FedexAcc"/> -->
+                         <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Shipping_FedexAcc"/>
 
-<!--                          <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_editMiniCart_Quantity_PickUp_CC"/> -->
+                         <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_editMiniCart_Quantity_PickUp_CC"/>
 
-<!--                          <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Delete_All_itemsFromMiniCart"/> -->
-<!--    <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_pickUP_CCFlow"/> -->
-<!--            <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_Shipping_FedExAccFlow"/> -->
+                         <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Delete_All_itemsFromMiniCart"/>
+                         <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_pickUP_CCFlow"/>
+           <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_Shipping_FedExAccFlow"/>
+            <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCardsPreminum_QuickLinks_Flow"/> 
+         <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Corrugated_plastic_sign_Pickup_CCflow"/>
+        <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Metal_Sign_Pickup_CCflow"/>
+        <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Yard_Sign_Pickup_FedExACCflow"/>
+<!-- <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_chengePickupToShipping"/> -->
 
-            <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCardsPreminum_QuickLinks_Flow"/>
           
      
 	     
