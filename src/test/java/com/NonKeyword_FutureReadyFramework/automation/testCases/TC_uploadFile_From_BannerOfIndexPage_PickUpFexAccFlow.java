@@ -18,7 +18,7 @@ import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 public class TC_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow extends BaseClass {
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC39_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

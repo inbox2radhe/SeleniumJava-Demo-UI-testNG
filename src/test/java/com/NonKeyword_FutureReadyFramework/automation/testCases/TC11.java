@@ -16,7 +16,7 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 	public class TC11 extends BaseClass {
 
 		@Test(enabled = true)
-		public void magentoExecution() throws IOException, InterruptedException {
+		public void TC11_Brouchers_Shipping_LocalDelivery_CC() throws IOException, InterruptedException {
 
 			LoginPage loginPage = new LoginPage();
 			ExcelUtils excelRead = new ExcelUtils();

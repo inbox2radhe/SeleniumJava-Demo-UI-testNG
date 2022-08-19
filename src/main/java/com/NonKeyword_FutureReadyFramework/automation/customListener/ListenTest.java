@@ -20,13 +20,28 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.ExtReporterClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
+//import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class ListenTest extends BaseClass implements ITestListener {
+	
+//	ExtentHtmlReporter htmlReporter;
 	ExtentReports extent = ExtReporterClass.extReportGenerator();
 	ExtentTest test;
 
 	public void onTestStart(ITestResult result) {
 		test = extent.createTest(result.getMethod().getMethodName());
+		
+//		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "\\reports\\AutomationReport.html");//specify location of the report
+//		
+//		htmlReporter.config().setDocumentTitle("Automation Report"); // TiTle of report
+//		htmlReporter.config().setReportName("Functional Testing"); // name of the report
+//		htmlReporter.config().setTheme(Theme.DARK);
+//		
+//		extent=new ExtentReports();
+//		extent.attachReporter(htmlReporter);
+//		extent.setSystemInfo("Host name","localhost");
+//		extent.setSystemInfo("Environemnt","QA");
 	}
 
 	public void onTestSuccess(ITestResult result) {
@@ -49,6 +64,7 @@ public class ListenTest extends BaseClass implements ITestListener {
 
 	public void onFinish(ITestContext context) {
 		extent.flush();
+		
 	}
 
 }

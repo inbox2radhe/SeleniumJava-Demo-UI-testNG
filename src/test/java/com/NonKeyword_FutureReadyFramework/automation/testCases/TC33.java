@@ -14,7 +14,7 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 public class TC33 extends BaseClass {
 
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC33_Brochures_Shipping_2Day_CC() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

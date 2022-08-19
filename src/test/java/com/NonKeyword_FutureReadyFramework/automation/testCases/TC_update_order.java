@@ -15,7 +15,7 @@ public class TC_update_order extends BaseClass {
 
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC41_update_order() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

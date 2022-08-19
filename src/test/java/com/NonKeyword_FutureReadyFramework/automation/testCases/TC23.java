@@ -14,7 +14,7 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 public class TC23 extends BaseClass {
 
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC23_Flyers_Shipping_FirstOvernight_FedExAcc() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

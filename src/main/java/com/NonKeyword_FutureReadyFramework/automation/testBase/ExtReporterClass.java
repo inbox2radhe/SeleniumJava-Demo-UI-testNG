@@ -19,10 +19,10 @@ public class ExtReporterClass {
 	
 
 	public static ExtentReports extReportGenerator() {
-		String reportspath = System.getProperty("user.dir")+"\\reports\\testreport.html";
+		String reportspath = System.getProperty("user.dir")+"\\reports\\AutomationTestReport.html";
 		ExtentSparkReporter reporter = new ExtentSparkReporter(reportspath);
 		reporter.config().setReportName("NonKeyword_FutureReadyFramework automation Results");
-		reporter.config().setDocumentTitle("TestResults");
+		reporter.config().setDocumentTitle("Automation Report POD 2.0");
 		reporter.config().setTheme(Theme.DARK);
 		extent = new ExtentReports();
 		extent.attachReporter(reporter);

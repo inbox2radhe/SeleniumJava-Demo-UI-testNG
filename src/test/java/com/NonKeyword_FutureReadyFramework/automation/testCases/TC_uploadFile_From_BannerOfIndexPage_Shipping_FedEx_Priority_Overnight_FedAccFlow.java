@@ -18,7 +18,7 @@ public class TC_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overni
 	
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC38_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overnight_FedAccFlow() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

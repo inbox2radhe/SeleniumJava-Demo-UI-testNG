@@ -2,16 +2,22 @@ package com.NonKeyword_FutureReadyFramework.automation.testCases;
 
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.NonKeyword_FutureReadyFramework.automation.application.LoginPage;
+import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 import com.NonKeyword_FutureReadyFramework.automation.excelReader.ExcelUtils;
 import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 
+
+
+
+@Listeners(ListenTest.class)
 public class TC_Outdoor_Banners_PickUp_CC extends BaseClass{
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC47_Outdoor_Banners_PickUp_CC() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

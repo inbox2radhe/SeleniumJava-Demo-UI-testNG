@@ -17,7 +17,7 @@ import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 public class TC_uploadFile_From_BannerOfIndexPage_Shipping_GroundUS_CCFlow extends BaseClass{
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC37_uploadFile_From_BannerOfIndexPage_Shipping_GroundUS_CCFlow() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

@@ -52,6 +52,7 @@ public class BaseClass {
 				WebDriverManager.chromedriver().setup();
 				driver = new ChromeDriver();
 				driver.manage().window().maximize();
+				driver.manage().deleteAllCookies();
 				System.out.println("[PASSED]" + browsername + "browser launched maximized successfully");
 			} catch (Exception e) {
 				System.err.println("[ERROR] Unable to launch " + browsername + e.toString());
@@ -159,6 +160,10 @@ return updatecardtxt;
 	
 	public void waitSync() throws InterruptedException {
 		Thread.sleep(10000);
+	}
+	
+	public void shortWaitSync() throws InterruptedException {
+		Thread.sleep(5000);
 	}
 	
 	

@@ -482,7 +482,8 @@ public class LoginPage extends BaseClass {
 
 		// PageFactory is used to find elements with @FindBy specified
 		PageFactory.initElements(driver, or);
-
+		
+		shortWaitSync();
 		clickelement(or.uploadbtnFromBannerPage);
 		String productName = tocSheet.getRow(row).getCell(4).getStringCellValue();
 
@@ -601,9 +602,9 @@ public class LoginPage extends BaseClass {
 		inputtext(or.nameoncard,"Test User");
 		inputtext(or.cardno,"4111111111111111");
 		Select month = new Select(driver.findElement(By.xpath("//select[@class='expiration-month']")));
-		month.selectByVisibleText("2 - February");
+		month.selectByVisibleText("5 - May");
 		Select year = new Select(driver.findElement(By.xpath("//select[@class='expiration-year']")));
-		year.selectByVisibleText("2024");
+		year.selectByVisibleText("2026");
 		inputtext(or.cvv,"111");
 
 		//Billing info

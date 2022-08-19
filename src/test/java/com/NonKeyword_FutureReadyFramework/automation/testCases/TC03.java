@@ -23,7 +23,7 @@ public class TC03 extends BaseClass {
 
 	
 	@Test
-	public void magentoExecution() throws IOException, InterruptedException{
+	public void TC03_Flyers_Shipping_FirstOverNight_FedExAcc() throws IOException, InterruptedException{
 		
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();

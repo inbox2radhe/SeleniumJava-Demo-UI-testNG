@@ -2,16 +2,20 @@ package com.NonKeyword_FutureReadyFramework.automation.testCases;
 
 import java.io.IOException;
 
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.NonKeyword_FutureReadyFramework.automation.application.ProductCategoryPage;
+import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 import com.NonKeyword_FutureReadyFramework.automation.excelReader.ExcelUtils;
 import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 
+
+@Listeners(ListenTest.class)
 public class TC_Metal_Sign_Pickup_CCflow extends BaseClass{
 	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC52_Metal_Sign_Pickup_CCflow() throws IOException, InterruptedException {
 
 		ProductCategoryPage pcp = new ProductCategoryPage();
 		ExcelUtils excelRead = new ExcelUtils();

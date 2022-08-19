@@ -13,10 +13,8 @@ import com.NonKeyword_FutureReadyFramework.automation.customListener.ListenTest;
 @Listeners(ListenTest.class)
 public class TC_uploadFile_From_BannerOfIndexPage_PickUpCCFlow extends BaseClass {
 	
-
-	
 	@Test(enabled = true)
-	public void magentoExecution() throws IOException, InterruptedException {
+	public void TC40_uploadFile_From_BannerOfIndexPage_PickUpCCFlow() throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();
