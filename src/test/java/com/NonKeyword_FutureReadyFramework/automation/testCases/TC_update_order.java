@@ -17,12 +17,13 @@ public class TC_update_order extends BaseClass {
 	@Test(enabled = true)
 	public void TC41_update_order() throws IOException, InterruptedException {
 
-		LoginPage loginPage = new LoginPage();
-		ExcelUtils excelRead = new ExcelUtils();
-		int rowNumber = excelRead.excelReadTestCaseRowNo(getClass().getSimpleName());
-		System.out.print("TC Row number:"+rowNumber);
-		
-		loginPage.loginFuction_DMT(rowNumber);
+//		LoginPage loginPage = new LoginPage();
+//		ExcelUtils excelRead = new ExcelUtils();
+//		int rowNumber = excelRead.excelReadTestCaseRowNo(getClass().getSimpleName());
+//		System.out.print("TC Row number:"+rowNumber);
+//		
+//		loginPage.loginFuction_DMT(rowNumber);
+	
 
 	}
 }

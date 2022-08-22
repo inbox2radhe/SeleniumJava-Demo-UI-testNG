@@ -228,10 +228,12 @@
 				
 				<configuration>
 					<suiteXmlFiles>
-						<suiteXmlFile>testng.xml</suiteXmlFile>
+					<!--	<suiteXmlFile>Staging.xml</suiteXmlFile> -->
+						<suiteXmlFile>${suiteXmlFile}</suiteXmlFile> 
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
+			
 			<!-- 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

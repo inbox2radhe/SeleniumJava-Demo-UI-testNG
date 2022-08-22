@@ -55,6 +55,7 @@ public class ListenTest extends BaseClass implements ITestListener {
 
 		try {
 			test.addScreenCaptureFromPath(getScreenshotpath(result.getMethod().getMethodName()), "FAILED");
+			
 		} catch (IOException e) {
 			
 			e.printStackTrace();

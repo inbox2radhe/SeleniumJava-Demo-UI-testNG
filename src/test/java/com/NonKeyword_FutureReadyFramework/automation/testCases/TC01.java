@@ -12,6 +12,7 @@ package com.NonKeyword_FutureReadyFramework.automation.testCases;
 import java.io.IOException;
 
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.NonKeyword_FutureReadyFramework.automation.application.LoginPage;
@@ -21,16 +22,19 @@ import com.NonKeyword_FutureReadyFramework.automation.testBase.BaseClass;
 
 @Listeners(ListenTest.class)
 public class TC01 extends BaseClass {
-
+	
+	@Parameters({"Environment"})
 	@Test(enabled = true)
-	public void TC01_Brochuers_Shipping_2dayFedEx_CC() throws IOException, InterruptedException {
+	public void TC01_Brochuers_Shipping_2dayFedEx_CC(String env) throws IOException, InterruptedException {
 
 		LoginPage loginPage = new LoginPage();
 		ExcelUtils excelRead = new ExcelUtils();
 		int rowNumber = excelRead.excelReadTestCaseRowNo(getClass().getSimpleName());
 		System.out.print("TC Row number:"+rowNumber);
 		
-		loginPage.loginFuction_DMT(rowNumber);
+//		loginPage.loginFuction_DMT(rowNumber);
+		
+		loginPage.loginFuction_DMT1(rowNumber,env);
 
 	}
 

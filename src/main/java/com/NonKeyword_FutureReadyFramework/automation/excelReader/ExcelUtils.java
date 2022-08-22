@@ -193,8 +193,11 @@ public class ExcelUtils {
 		Workbook wb = new XSSFWorkbook(fis);
 		Sheet credsheet = wb.getSheet("configdata");
 		Row datarow = credsheet.getRow(1);
+		System.out.println("Row value"+datarow);
 		Cell datacell = datarow.getCell(2);
+		System.out.println("Cell Value"+datacell);
 		int cellType = datacell.getCellType();
+		System.out.println("Cell Type value"+cellType);
 
 		if (cellType == 1) {
 			urlCellValue = datacell.getStringCellValue();
@@ -207,6 +210,110 @@ public class ExcelUtils {
 		return urlCellValue;
 	}
 
+	
+	
+	public static String excelreadURL1(String env) throws IOException {
+
+		testConfigSheetPath = (System.getProperty("user.dir")
+				+ "//src//main//java//com//NonKeyword_FutureReadyFramework//automation//config//Config.xlsx");
+		File f = new File(testConfigSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet credsheet = wb.getSheet("configdata");
+		if(env.equals("Stage3"))
+		{	
+			
+				Row datarow = credsheet.getRow(5);
+				System.out.println("Row value"+datarow);
+				Cell datacell = datarow.getCell(2);
+				System.out.println("Cell Value"+datacell);
+				int cellType = datacell.getCellType();
+				System.out.println("Cell Type value"+cellType);
+		
+				if (cellType == 1) {
+					urlCellValue = datacell.getStringCellValue();
+				} else {
+					double numericCellValue = datacell.getNumericCellValue();
+					int numericCellValueint = (int) numericCellValue;
+					urlCellValue = Integer.toString(numericCellValueint);
+				}
+		
+				//return urlCellValue;
+		
+		}
+		else if(env.equals("Stage2"))
+		{	
+			
+			Row datarow = credsheet.getRow(6);
+			System.out.println("Row value"+datarow);
+			Cell datacell = datarow.getCell(2);
+			System.out.println("Cell Value"+datacell);
+			int cellType = datacell.getCellType();
+			System.out.println("Cell Type value"+cellType);
+	
+			if (cellType == 1) {
+				urlCellValue = datacell.getStringCellValue();
+			} else {
+				double numericCellValue = datacell.getNumericCellValue();
+				int numericCellValueint = (int) numericCellValue;
+				urlCellValue = Integer.toString(numericCellValueint);
+			}
+	
+			//return urlCellValue;
+	
+		}
+		
+		
+		else if(env.equals("Staging"))
+		{	
+			
+			Row datarow = credsheet.getRow(8);
+			System.out.println("Row value"+datarow);
+			Cell datacell = datarow.getCell(2);
+			System.out.println("Cell Value"+datacell);
+			int cellType = datacell.getCellType();
+			System.out.println("Cell Type value"+cellType);
+	
+			if (cellType == 1) {
+				urlCellValue = datacell.getStringCellValue();
+			} else {
+				double numericCellValue = datacell.getNumericCellValue();
+				int numericCellValueint = (int) numericCellValue;
+				urlCellValue = Integer.toString(numericCellValueint);
+			}
+	
+			//return urlCellValue;
+	
+		}
+		
+		else if(env.equals("Prod"))
+		{	
+			
+			Row datarow = credsheet.getRow(7);
+			System.out.println("Row value"+datarow);
+			Cell datacell = datarow.getCell(2);
+			System.out.println("Cell Value"+datacell);
+			int cellType = datacell.getCellType();
+			System.out.println("Cell Type value"+cellType);
+	
+			if (cellType == 1) {
+				urlCellValue = datacell.getStringCellValue();
+			} else {
+				double numericCellValue = datacell.getNumericCellValue();
+				int numericCellValueint = (int) numericCellValue;
+				urlCellValue = Integer.toString(numericCellValueint);
+			}
+	
+			//return urlCellValue;
+	
+		}
+		
+		return urlCellValue;
+		
+	}
+	
+	
+	
 	// ********READING USERNAME VALUE********
 	public static String excelreadUserName() throws IOException {
 
