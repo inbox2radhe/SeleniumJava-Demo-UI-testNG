@@ -166,17 +166,13 @@ public class ObjectRepository_LoginPage {
 	
 		@FindBy(how =How.NAME, using="update_cart_action")
 		public WebElement updateOdrbtn;
-		
 		@FindBy(xpath="//*[@class='action action-edit']")
 		public WebElement editOrderbtn;
-		
 		@FindBy(xpath="//div[@class='input-group']")
 		public WebElement selectqtybtn;
-		
 		//@FindBy(xpath="//*[@class='price-footer__cart price-footer__add-to-cart ng-star-inserted']")//Save Changes
 		@FindBy(xpath ="//button//span[text()='Save Changes']")
 		public WebElement btnSaveChanges;
-		
 		//@FindBy(xpath="//div[@id='checkout-cart-validationmessages-message-success']")
 		@FindBy(xpath="//div[@class='message message-success success']")
 		public WebElement validateCartUpdatedmsg;
@@ -277,29 +273,23 @@ public class ObjectRepository_LoginPage {
 	public WebElement ndcAcc_applybutton;
 	@FindBy(xpath = "//a[@class='fedex-acc-remove-button']")
 	public WebElement ndcAcc_Remove;
+	
 	//Canva flow
 
 	@FindBy(xpath="//div[@class='product-info-main mt-95-lg']//a[@class='link canva-modal-link']")
 	public WebElement canvaflowlnk;
-
 	@FindBy(xpath="//div[@class='modal-body-content']//button[@class='btn-primary btn-start lh-24 start-design']")
 	public WebElement startdesign_btn;
-
 	@FindBy(xpath="//footer[@class='modal-footer']//button[@class='continue-btn']//span")
 	public WebElement contiueAsgustInCanvaFlow;
-
 	@FindBy(xpath="(//div[@class='BE2rWg'])[1]")
 	public WebElement selectCanvatmplate;
-
 	@FindBy(xpath="//div[@class='M9tVdQ UAeX5g o3oPVg CXbsQw']//div[@class='CXbsQw']")
 	public WebElement canvaPublishbtn;
-
 	@FindBy(xpath="//div[@class='Q0yqLQ _93Ozvg']//button[@class='_1QoxDw Qkd66A tYI0Vw o4TrkA zKTE_w Qkd66A tYI0Vw lsXp-w ubW6qw cwOZMg zQlusQ uRvRjQ sRJKqA']//span")
 	public WebElement continute_btn_after_canvaPublish1;
-
 	@FindBy(xpath="//div[@class='Q0yqLQ _93Ozvg']//button[@class='_1QoxDw Qkd66A tYI0Vw o4TrkA zKTE_w Qkd66A tYI0Vw lsXp-w ubW6qw cwOZMg zQlusQ uRvRjQ sRJKqA']//span")
 	public WebElement continute_btn_after_canvaPublish2;
-
 	@FindBy(xpath="//div[@class='Q0yqLQ _93Ozvg']//button[@class='_1QoxDw Qkd66A tYI0Vw o4TrkA zKTE_w Qkd66A tYI0Vw lsXp-w ubW6qw cwOZMg zQlusQ uRvRjQ sRJKqA']//span")
 	public WebElement continute_btn_after_canvaPublish3;
 
@@ -307,7 +297,6 @@ public class ObjectRepository_LoginPage {
 
     @FindBy(xpath="(//div[@class='products wrapper retail-session grid products-grid']//li[@class='item product product-item'])[2]")
     public WebElement businessCards_preminum;
-
     @FindBy(xpath="//div[@class='product media sticky']//span[contains(text(),'Business Cards - Premium')]")
     public WebElement getProductTitle;
 
@@ -315,13 +304,10 @@ public class ObjectRepository_LoginPage {
 
     @FindBy(xpath="//div[@class='product details product-item-details']//a[@class='product-item-link']")
     public WebElement selectPPT;
-
     @FindBy(xpath="//div[@class='product media sticky']//span[contains(text(),'Presentations')]")
     public WebElement getPPTtitle;
-
     @FindBy(xpath="(//div[@class='card-body'])[2]//edl-radio-button[@class='radio']")
     public WebElement select2PageHandouts;
-
     @FindBy(xpath="//button[@class='app-convert-ppt-settings__element-next-button']")
     public WebElement clickNxt;
 
@@ -330,7 +316,6 @@ public class ObjectRepository_LoginPage {
 
     @FindBy(xpath="//li[@class='item product product-item']//a[contains(text(),'Outdoor Banners')]")
     public WebElement selectOutdoorBanner;
-
     @FindBy(xpath="//div[@class='product media sticky']//span[contains(text(),'Outdoor Banners')]")
     public WebElement getoutdoorBannertitle;
     
@@ -350,45 +335,32 @@ public class ObjectRepository_LoginPage {
     
     @FindBy(xpath="//div[@class='products wrapper retail-session grid products-grid']//a[contains(text(),'Resumes')]")
     public WebElement selectResumes;
-
     @FindBy(xpath="//div[@class='products wrapper retail-session grid products-grid']//a[contains(text(),'Manuals')]")
     public WebElement selectManuals;
-
     @FindBy(xpath="(//div[@class='retail-minicart'])[1]")
     public WebElement miniCart;
-
     @FindBy(xpath="//button[@id='top-cart-btn-checkout']")
     public WebElement mimiCart_proceedTochkoutbtn;
 
     //Edit MiniCart Flow
     @FindBy(xpath="//div[@class='actions']//a[@class='action viewcart']//span")
     public WebElement view_editCart_lnk;
-
     @FindBy(xpath="//a[@title='Edit item']")
     public WebElement MiniCart_Editbtn;
-
     @FindBy(xpath="//div[@class='input-number']//div[@class='input-number__input-content'])[2]")
     public WebElement MiniCart_updateQtyBox;
-
     @FindBy(xpath="(//div[@class='input-number']//div[@class='input-number__input-content'])[2]//input[@class='input-number__input ng-untouched ng-pristine ng-valid']")
     public WebElement MiniCart_editqty;
-
     @FindBy(xpath="//button[@class='price-footer__cart price-footer__add-to-cart ng-star-inserted']//span")
     public WebElement savebtnAfterEdit;
-
     @FindBy(xpath="//div[@class='message message-success success']")
     public WebElement successmsg_afterCartEdit;
-
-
     @FindBy(xpath="(//div[@class='product actions'])[1]//a[@class='action delete']")
     public WebElement MiniCart_DeleteFirstCartItem;
-
     @FindBy(xpath="(//div[@class='product actions'])[2]//a[@class='action delete']")
     public WebElement MiniCart_DeleteSecondCartItem;
-
     @FindBy(xpath="//button[@class='clear-action-primary clear-action-accept']")
     public WebElement MiniCart_acceptbtn;
-
     @FindBy(xpath="(//div[@class='cart-empty']//p)[1]")
     public WebElement emptyMiniCartmsg;
     
@@ -396,46 +368,36 @@ public class ObjectRepository_LoginPage {
 
     @FindBy(xpath="//div[@class='menu horizontal centre ']//li[@class='menu-dropdown-icon dropdown category-item nav-1828 custom_mega_menu']")
     public WebElement Business_Career_Essential_lnk;
-
     @FindBy(xpath="(//strong[@class='product-item-name static-link']//a[@class='product-item-link'])[1]")
     public WebElement Business_Cards;
-
     @FindBy(xpath="(//div[@class='block widget block-new-products-names']//a[@class='product-item-link'])[12]")
     public WebElement Note_Cards;
-
     @FindBy(xpath="(//div[@class='shopnow-product-pricing-container']//a[contains(text(),'SHOP NOW')])[1]")
     public WebElement quicklnk_shopnowbtn;
-
     @FindBy(xpath="(//div[@class='shopnow-product-pricing-container']//a[contains(text(),'SHOP NOW')])[2]")
     public WebElement Preminum_quicklnk_shopnowbtn;
-
     @FindBy(xpath="//h1[@class='page-title']//span[contains(text(),'Business Cards - Premium')]")
     public WebElement BusinessCards_Primunimitem_cnf_title;
-
     @FindBy(xpath="//h1[@class='page-title']//span[contains(text(),'Note Cards & Thank You Cards - Premium')]")
     public WebElement NoteCards_Primunimitem_cnf_title;
-
     @FindBy(xpath="(//a[@class='tab-title ui-tabs-anchor']//span[@class='tab-title'])[2]")
     public WebElement PreminumQuicklnk;
-
     @FindBy(xpath="//edl-accordion[@id='Product Print Properties']")
     public WebElement NotCards_productProperties;
-
     @FindBy(xpath="(//button[@class='accordion-list__button ng-tns-c58-9 accordion-list__button--no-icon ng-star-inserted'])[1]")
     public WebElement NoteCards_PremiumProduct_editbtn;
-
     @FindBy(xpath="(//label[@class='radio-button-layout no-select'])[2]//div[@class='radio-container']")
     public WebElement radiobtn_notecard;
-   
     @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Corrugated Plastic Sign')]")
     public WebElement select_Corrugated_Plastic_Sign;
-    
     @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Metal Sign')]")
     public WebElement Select_Metal_Sign;
+    
     //Yard Sign
    @FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Yard Sign')]")
    public WebElement select_Yard_sign;
- //FCL Checkout Login popup
+ 
+   //FCL Checkout Login popup
  	@FindBy(how = How.CSS, using = "div#fcl-checkout-login-popup a.btn-popup-login span.span-popup-login")
  	public WebElement checkout_Loginbutton;
  	@FindBy(xpath = "//div[@id='fcl-checkout-login-popup']//span[@class='span-popup-create-user']")
@@ -449,8 +411,93 @@ public class ObjectRepository_LoginPage {
  	public WebElement changeToPickup;
 
 
+ 	//Configurator Flow webelements
 
-
+	//@FindBy(xpath="(//div[@class='accordion-head']//h3)[2]")
+ 	@FindBy(xpath="//*[@id='Product Print Properties']/div[1]/h3")
+	public WebElement ProductPrint_properties;
+	//@FindBy(xpath="(//div[@class='accordion-head'])[2]//edl-icon[@class='ng-tns-c11-3 chevron-up']")
+ 	//@FindBy(xpath="//button[@class='icon-container accordion-list__icon-container ng-tns-c11-3 ng-star-inserted']")
+	
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[2]")
+	public WebElement postCard_ProductPrint_properties_Size;
+	@FindBy(xpath="(//edl-radio-group[@Name='choicesRdGrp'])[2]//label[@class='radio-button-layout no-select']//div[@class='inner-circle']")
+	public WebElement postCard_ProductPrint_properties_size_4x5;
+	@FindBy(xpath="//button[@class='price-footer__cart price-footer__add-to-cart ng-star-inserted']")
+	public WebElement btn_SaveChanges;
+	@FindBy(xpath="//p[@class='price-footer__total-number ng-star-inserted']")
+	public WebElement price_afterpostCard_ProductPrint_propertiesUpdate;
+	@FindBy(xpath="//td[@class='col price']//span")
+	public WebElement price_afterpostCard_ProductPrint_propertiesUpdate_Incart;
+	
+	//Manuals configurator webelement
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[1]")
+	public WebElement btn_Manual_Size_Edit;
+	
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[1]")
+	public WebElement editSize_Manual_8half_and_11;
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[2]")
+	public WebElement editSize_Manual_8half_and_14;
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[3]")
+	public WebElement editSize_Manual_11_and_17;
+	
+	@FindBy(xpath="//button[contains(text(),' Close ')]")
+	public WebElement ProductPrint_properties_Size_Savebtn;
+	
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[2]")
+	public WebElement Manuals_Edit_Paperbtn;
+	
+	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[1]")
+	public WebElement Manuals_printProperties_Paper_StdWhitePaperbtn;
+	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[2]")
+	public WebElement Manuals_printProperties_Paper_proWhitePaperbtn;
+		@FindBy(xpath="(//div[@class='choice__label-text'])[10]")
+		public WebElement Manuals_printProperties_Paper_proWhitePaperbtn_leaser60lb;
+		@FindBy(xpath="(//div[@class='choice__label-text'])[11]")
+		public WebElement Manuals_printProperties_Paper_proWhitePaperbtn_leaser80lb;
+		@FindBy(xpath="(//div[@class='choice__label-text'])[12]")
+		public WebElement Manuals_printProperties_Paper_proWhitePaperbtn_leaser32lb;
+	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[3]")
+	public WebElement Manuals_printProperties_Paper_cardStockSpeciality_btn;
+		@FindBy(xpath="//div[contains(text(),'Water Resistant (7.7 Mil)')]")
+		public WebElement Manuals_printProperties_Paper_cardStockSpeciality_btn_waterResistant_btn;
+		@FindBy(xpath="//div[@class='choice__label-content']//div[contains(text(),'Ivory (65 lb.)')]")
+		public WebElement Manuals_printProperties_Paper_cardStockSpeciality_btn_Ivory65LB_btn;
+		@FindBy(xpath="(//button[@class='accordion-list__button ng-tns-c11-3 accordion-list__button--no-icon ng-star-inserted'])[2]")
+		public WebElement Manuals_printProperties_Paper_Close_btn;
+	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[4]")
+	public WebElement Manuals_printProperties_Paper_StdColorPaperbtn;
+		//@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[33]//div[@class='inner-circle']")////div[contains(text(),'Ivory (24 lb.)')]// //
+		//@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[4]//div[contains(text(),'Sun Yellow (24 lb.)')]")
+		//@FindBy(xpath="(//div[@class='radio-button-container']//div[@class='inner-circle'])[33]")
+		@FindBy(xpath="(//div[@class='radio-button-container']//label[@class='radio-button-layout no-select'])[33]")
+		public WebElement Manuals_printProperties_Paper_StdColorPaperbtn_Ivory24LB_btn;//input[@id='edl-radio-32']
+	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[5]")
+	public WebElement Manuals_printProperties_Paper_proColorPaperbtn;
+	
+	
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[4]")
+	public WebElement Manuals_StdPaper_Laser_24lb_radiobtn;
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[5]")
+	public WebElement Manuals_StdPaper_Laser_32lb_radiobtn;
+	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[6]")
+	public WebElement Manuals_StdPaper_Recycled_20lb_radiobtn;
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	

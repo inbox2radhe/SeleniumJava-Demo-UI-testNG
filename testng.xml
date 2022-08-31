@@ -18,9 +18,9 @@
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_GroundUS_CCFlow"/>
 		 
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_update_order"/>
-		  -->
-		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01"/> 
-		    <!--
+		  
+		  <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC01"/> 
+		    
 	       <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC02"/>
 	      
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC03"/>
@@ -85,9 +85,22 @@
 			<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_chengePickupToShipping"/> 
 		-->
 		
+	<!--<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PostCards_update_Product_Print_properties_Size"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_AllSize"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_StdWhitePaper"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_ProWhitePaper"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_CardStocksSpecialty"/>
+	-->	
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_StdColorPaper"/>
+		
+		
+		
+		
+		
+		
 </classes>
           
 
-	  </test> <!-- Test -->
+	  </test>
   
-</suite> <!-- Suite -->
+</suite> 
