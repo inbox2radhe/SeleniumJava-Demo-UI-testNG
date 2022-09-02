@@ -11,7 +11,7 @@
 	       <test thread-count="5" name="Test"  verbose="2" >
 	       <parameter name="Environment" value="Stage2"/>
 <classes> 
-		 <!--
+		 
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpCCFlow"/>
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow"/>
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overnight_FedAccFlow"/>
@@ -83,16 +83,21 @@
         		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Yard_Sign_Pickup_FedExACCflow"/>
 			
 			<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_chengePickupToShipping"/> 
-		-->
 		
-	<!--<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PostCards_update_Product_Print_properties_Size"/>
+		
+	<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PostCards_update_Product_Print_properties_Size"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_AllSize"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_StdWhitePaper"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_ProWhitePaper"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_CardStocksSpecialty"/>
-	-->	
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_StdColorPaper"/>
-		
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_ProColorPaper"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_Color_BlackWhite"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_Sides"/>
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_Orientation"/>
+	
+			
+		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_BindingandFinishing_Binding"/>
 		
 		
 		

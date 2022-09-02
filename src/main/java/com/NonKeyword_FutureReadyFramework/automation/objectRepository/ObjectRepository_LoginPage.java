@@ -412,12 +412,10 @@ public class ObjectRepository_LoginPage {
 
 
  	//Configurator Flow webelements
-
-	//@FindBy(xpath="(//div[@class='accordion-head']//h3)[2]")
+	
+ 		//Product Properties webelements
  	@FindBy(xpath="//*[@id='Product Print Properties']/div[1]/h3")
 	public WebElement ProductPrint_properties;
-	//@FindBy(xpath="(//div[@class='accordion-head'])[2]//edl-icon[@class='ng-tns-c11-3 chevron-up']")
- 	//@FindBy(xpath="//button[@class='icon-container accordion-list__icon-container ng-tns-c11-3 ng-star-inserted']")
 	
 	@FindBy(xpath="(//button[contains(text(),'Edit')])[2]")
 	public WebElement postCard_ProductPrint_properties_Size;
@@ -446,6 +444,13 @@ public class ObjectRepository_LoginPage {
 	
 	@FindBy(xpath="(//button[contains(text(),'Edit')])[2]")
 	public WebElement Manuals_Edit_Paperbtn;
+
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[4]")
+	public WebElement Manuals_Edit_sides_btn;
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[5]")
+	public WebElement Manuals_Edit_orientation_btn;
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[6]")
+	public WebElement Manuals_Edit_printPerpage_btn;
 	
 	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[1]")
 	public WebElement Manuals_printProperties_Paper_StdWhitePaperbtn;
@@ -457,6 +462,7 @@ public class ObjectRepository_LoginPage {
 		public WebElement Manuals_printProperties_Paper_proWhitePaperbtn_leaser80lb;
 		@FindBy(xpath="(//div[@class='choice__label-text'])[12]")
 		public WebElement Manuals_printProperties_Paper_proWhitePaperbtn_leaser32lb;
+		
 	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[3]")
 	public WebElement Manuals_printProperties_Paper_cardStockSpeciality_btn;
 		@FindBy(xpath="//div[contains(text(),'Water Resistant (7.7 Mil)')]")
@@ -465,15 +471,16 @@ public class ObjectRepository_LoginPage {
 		public WebElement Manuals_printProperties_Paper_cardStockSpeciality_btn_Ivory65LB_btn;
 		@FindBy(xpath="(//button[@class='accordion-list__button ng-tns-c11-3 accordion-list__button--no-icon ng-star-inserted'])[2]")
 		public WebElement Manuals_printProperties_Paper_Close_btn;
+		
 	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[4]")
 	public WebElement Manuals_printProperties_Paper_StdColorPaperbtn;
-		//@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[33]//div[@class='inner-circle']")////div[contains(text(),'Ivory (24 lb.)')]// //
-		//@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[4]//div[contains(text(),'Sun Yellow (24 lb.)')]")
-		//@FindBy(xpath="(//div[@class='radio-button-container']//div[@class='inner-circle'])[33]")
 		@FindBy(xpath="(//div[@class='radio-button-container']//label[@class='radio-button-layout no-select'])[33]")
 		public WebElement Manuals_printProperties_Paper_StdColorPaperbtn_Ivory24LB_btn;//input[@id='edl-radio-32']
+		
 	@FindBy(xpath="(//div[@class='accordion-list__choicegroup-print-label'])[5]")
 	public WebElement Manuals_printProperties_Paper_proColorPaperbtn;
+	
+	
 	
 	
 	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[4]")
@@ -486,14 +493,41 @@ public class ObjectRepository_LoginPage {
 	
 	
 	
+	//Manuals Product Print properties Color Black/White webelements
+	@FindBy(xpath="(//button[contains(text(),'Edit')])[3]")
+	public WebElement Manuals_Edit_colorBW_btn;
+	@FindBy(xpath="(//div[contains(text(),'Black & White')])[1]")////input[@id='edl-radio-52'] (//div[contains(text(),'Black & White')])[2]
+	public WebElement Manuals_Edit_colorBW_BW_radiobtn;
+	@FindBy(xpath="(//div[contains(text(),'Black & White')])[2]")
+	public WebElement Manuals_Edit_colorBW_BW_FirstPageColor_radiobtn;
+	@FindBy(xpath="//button[contains(text(),' Close ')]")
+	public WebElement Manuals_Edit_colorBW_BW_closebtn;
+	
+	//Manuals Product Print properties Sides webelements
+	@FindBy(xpath="//edl-accordion[@id='Sides']//div[@class='accordion-list__text accordion-list__text--enabled']")
+	public WebElement Manuals_Edit_Sides_btn;
+	@FindBy(xpath="//div[contains(text(),('Double-Sided'))]")
+	public WebElement Manuals_Edit_Sides_doubleSided_radiobtn; 
+	@FindBy(xpath="//button[contains(text(),(' Close '))]")
+	public WebElement Manuals_Edit_Sides_Close_btn;
+	
+	
+	//Manuals Product Print properties Orientation webelements
+	
+	@FindBy(xpath="//edl-accordion[@id='Orientation']//div[@class='accordion-list__text accordion-list__text--enabled']")
+	public WebElement Manuals_Edit_orientation_btn1;
+	@FindBy(xpath="(//div[@class='radio-label'])[58]")
+	public WebElement Manuals_Edit_orientation_btn1_Landscape_radiobtn;
 	
 	
 	
+	//Configurator Binding and Finishing webelements
 	
-	
-	
-	
-	
+ 	@FindBy(xpath="//*[@id='Binding & Finishing']/div[1]/h3")
+ 	public WebElement Binding_and_Finishing;
+ 	
+ 	@FindBy(xpath="(//button[@class='accordion-list__button ng-tns-c11-3 ng-star-inserted'])[1]")
+ 	public WebElement Binding_and_Finishing_binding_stapling_addbtn;
 	
 	
 	

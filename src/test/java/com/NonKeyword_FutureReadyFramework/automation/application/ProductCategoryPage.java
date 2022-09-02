@@ -25,6 +25,311 @@ import junit.framework.Assert;
 public class ProductCategoryPage extends BaseClass {
 	
 	
+	public void Manuals_update_Product_Print_properties_BindingandFinishing_Binding(int row) throws IOException, InterruptedException {
+		
+		
+
+		String path = System.getProperty("user.dir");
+		String testDataSheetPath = (path
+				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("Sanity");
+
+		System.out.println("test sheet selected");
+
+		try {
+			launchBrowser();
+			System.out.println("[PASSED]" + "browser launched and maximized successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+
+		try {
+			launchURL(ExcelUtils.excelreadURL());
+			System.out.println("[PASSED]" + "URL launched successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch URL");
+		}
+
+		ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+
+		// adding products to cart
+		
+		addProductTocart(or.selectManuals, "Manuals");
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.Binding_and_Finishing);
+		windowScroll();
+		clickelement(or.Binding_and_Finishing_binding_stapling_addbtn);
+		shortWaitSync();
+		
+	}
+	
+	public void Manuals_update_Product_Print_properties_Orientation(int row) throws Exception {
+		
+
+		String path = System.getProperty("user.dir");
+		String testDataSheetPath = (path
+				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("Sanity");
+
+		System.out.println("test sheet selected");
+
+		try {
+			launchBrowser();
+			System.out.println("[PASSED]" + "browser launched and maximized successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+
+		try {
+			launchURL(ExcelUtils.excelreadURL());
+			System.out.println("[PASSED]" + "URL launched successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch URL");
+		}
+
+		ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+
+		// adding products to cart
+		
+		addProductTocart(or.selectManuals, "Manuals");
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.ProductPrint_properties);
+		windowScroll();
+		clickelement(or.Manuals_Edit_orientation_btn1);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_orientation_btn1_Landscape_radiobtn);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_orientation_btn1);
+		clickelement(or.ProductPrint_properties);
+		waitSync();
+		String productPriceBeforeCart=or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+		System.out.println("Updated Product Price before adding to Cart::"+productPriceBeforeCart);
+		clickelement(or.savebtnAfterEdit);
+		waitSync();
+		String productPriceInCart=or.price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
+		System.out.println("Updated Product Price after adding to Cart::"+productPriceBeforeCart);
+		Assert.assertEquals(productPriceBeforeCart, productPriceInCart);
+		shortWaitSync();
+		proceedToChecout(row);
+		
+	}
+	
+	public void Manuals_update_Product_Print_properties_Sides(int row) throws IOException, InterruptedException {
+		
+		
+		String path = System.getProperty("user.dir");
+		String testDataSheetPath = (path
+				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("Sanity");
+
+		System.out.println("test sheet selected");
+
+		try {
+			launchBrowser();
+			System.out.println("[PASSED]" + "browser launched and maximized successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+
+		try {
+			launchURL(ExcelUtils.excelreadURL());
+			System.out.println("[PASSED]" + "URL launched successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch URL");
+		}
+
+		ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+
+		// adding products to cart
+		
+		addProductTocart(or.selectManuals, "Manuals");
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.ProductPrint_properties);
+		windowScroll();
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_Sides_btn);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_Sides_doubleSided_radiobtn);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_Sides_Close_btn);
+		clickelement(or.ProductPrint_properties);
+		waitSync();
+		String productPriceBeforeCart=or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+		System.out.println("Updated Product Price before adding to Cart::"+productPriceBeforeCart);
+		clickelement(or.savebtnAfterEdit);
+		waitSync();
+		String productPriceInCart=or.price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
+		System.out.println("Updated Product Price after adding to Cart::"+productPriceBeforeCart);
+		Assert.assertEquals(productPriceBeforeCart, productPriceInCart);
+		shortWaitSync();
+		proceedToChecout(row);
+	}
+	
+	
+	public void Manuals_update_Product_Print_properties_Color_BlackWhite(int row) throws InterruptedException, IOException {
+		
+		
+		String path = System.getProperty("user.dir");
+		String testDataSheetPath = (path
+				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("Sanity");
+
+		System.out.println("test sheet selected");
+
+		try {
+			launchBrowser();
+			System.out.println("[PASSED]" + "browser launched and maximized successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+
+		try {
+			launchURL(ExcelUtils.excelreadURL());
+			System.out.println("[PASSED]" + "URL launched successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch URL");
+		}
+
+		ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+
+		// adding products to cart
+		
+		addProductTocart(or.selectManuals, "Manuals");
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.ProductPrint_properties);
+		clickelement(or.Manuals_Edit_colorBW_btn);
+		clickelement(or.Manuals_Edit_colorBW_BW_radiobtn);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_colorBW_BW_closebtn);
+		clickelement(or.ProductPrint_properties);
+		waitSync();
+		String productPriceBeforeCart=or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+		System.out.println("Updated Product Price before adding to Cart::"+productPriceBeforeCart);
+		clickelement(or.savebtnAfterEdit);
+		waitSync();
+		String productPriceInCart=or.price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
+		System.out.println("Updated Product Price after adding to Cart::"+productPriceBeforeCart);
+		Assert.assertEquals(productPriceBeforeCart, productPriceInCart);
+		shortWaitSync();
+		
+		//selecting next radio button- First page color and remaining pages black and white
+		
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.ProductPrint_properties);
+		clickelement(or.Manuals_Edit_colorBW_btn);
+		clickelement(or.Manuals_Edit_colorBW_BW_FirstPageColor_radiobtn);
+		shortWaitSync();
+		clickelement(or.Manuals_Edit_colorBW_BW_closebtn);
+		clickelement(or.ProductPrint_properties);
+		waitSync();
+		String productPriceBeforeCart1=or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+		System.out.println("Updated Product Price before adding to Cart::"+productPriceBeforeCart1);
+		clickelement(or.savebtnAfterEdit);
+		waitSync();
+		String productPriceInCart1=or.price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
+		System.out.println("Updated Product Price after adding to Cart::"+productPriceBeforeCart1);
+		Assert.assertEquals(productPriceBeforeCart1, productPriceInCart1);
+		shortWaitSync();
+		
+		
+		proceedToChecout(row);
+	}
+	
+	public void Manuals_update_Product_Print_properties_ProColorPaper(int row) throws InterruptedException, IOException {
+		
+		
+		String path = System.getProperty("user.dir");
+		String testDataSheetPath = (path
+				+ "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\data\\TestData.xlsx");
+
+		List<String> list = new ArrayList<String>();
+		File f = new File(testDataSheetPath);
+		FileInputStream fis = new FileInputStream(f);
+		Workbook wb = new XSSFWorkbook(fis);
+		Sheet tocSheet = wb.getSheet("Sanity");
+
+		System.out.println("test sheet selected");
+
+		try {
+			launchBrowser();
+			System.out.println("[PASSED]" + "browser launched and maximized successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch chrome, firefox, edge and ie browsers");
+		}
+
+		try {
+			launchURL(ExcelUtils.excelreadURL());
+			System.out.println("[PASSED]" + "URL launched successfully");
+		} catch (Exception e) {
+			System.err.println("[ERROR] Unable to launch " + e.toString());
+			throw new RuntimeException("[FAILED] Unable to launch URL");
+		}
+
+		ObjectRepository_LoginPage or = new ObjectRepository_LoginPage();
+		PageFactory.initElements(driver, or);
+
+		// adding products to cart
+		
+		addProductTocart(or.selectManuals, "Manuals");
+		clickelement(or.editOrderbtn);
+		waitSync();
+		stwichingFrame();
+		clickelement(or.ProductPrint_properties);
+		clickelement(or.Manuals_Edit_Paperbtn);
+		shortWaitSync();
+		clickelement(or.Manuals_printProperties_Paper_proColorPaperbtn);
+		waitSync();
+		clickelement(or.Manuals_printProperties_Paper_proColorPaperbtn);
+		clickelement(or.Manuals_printProperties_Paper_Close_btn);
+		clickelement(or.ProductPrint_properties);
+		clickelement(or.savebtnAfterEdit);
+		proceedToChecout(row);
+		
+	}
+	
 	public void Manuals_update_Product_Print_properties_StdColorPaper(int row) throws InterruptedException, IOException {
 		
 		String path = System.getProperty("user.dir");
