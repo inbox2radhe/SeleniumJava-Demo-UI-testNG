@@ -21,7 +21,7 @@ public class TC_Manuals_update_Product_Print_properties_BindingandFinishing_Bind
 		ExcelUtils excelRead = new ExcelUtils();
 		int rowNumber = excelRead.excelReadTestCaseRowNo(getClass().getSimpleName());
 		System.out.print("TC Row number:"+rowNumber);
-		pc.Manuals_update_Product_Print_properties_Orientation(rowNumber);
+		pc.Manuals_update_Product_Print_properties_BindingandFinishing_Binding(rowNumber);
 		
 	}
 	

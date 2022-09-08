@@ -818,6 +818,7 @@ public class LoginPage extends BaseClass {
 		//Uploading file
 		System.out.println("Uploading from Index Page Banner's upload button");
 		waitSync();
+		shortWaitSync();
 		int size = driver.findElements(By.tagName("iframe")).size();
 		System.out.println(size);
 		driver.switchTo().frame(0);
@@ -1038,7 +1039,7 @@ public class LoginPage extends BaseClass {
 
 		//adding products to cart
 
-		addProductTocart(or.selectFlyersUsingSearch,"Flyers");
+		addProductTocartSingle(or.selectFlyersUsingSearch,"Flyers");
 		waitSync();
 		System.out.println("Flyers added to cart");
 

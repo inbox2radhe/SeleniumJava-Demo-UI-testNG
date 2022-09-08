@@ -254,7 +254,8 @@ public class ObjectRepository_LoginPage {
 
 	
 	//Upload file from Index page and use banner upload button
-	@FindBy(xpath="//a[@class='pagebuilder-button-primary']")
+			//@FindBy(xpath="//a[@class='pagebuilder-button-primary']")
+	@FindBy(xpath="//div[@class='pagebuilder-poster-content']//button[contains(text(),'UPLOAD & PRINT')]")
 	public WebElement uploadbtnFromBannerPage;
 	
 	@FindBy(xpath="(//div[@class='search results']//li[@class='item product product-item']//strong[@class='product name product-item-name']//a[contains(text(),'Flyers')])[1]")
@@ -414,7 +415,8 @@ public class ObjectRepository_LoginPage {
  	//Configurator Flow webelements
 	
  		//Product Properties webelements
- 	@FindBy(xpath="//*[@id='Product Print Properties']/div[1]/h3")
+ 			//@FindBy(xpath="//*[@id='Product Print Properties']/div[1]/h3")
+ 	@FindBy(xpath="//edl-accordion[@id='Product Print Properties']/div[1]/h3")
 	public WebElement ProductPrint_properties;
 	
 	@FindBy(xpath="(//button[contains(text(),'Edit')])[2]")
@@ -523,17 +525,48 @@ public class ObjectRepository_LoginPage {
 	
 	//Configurator Binding and Finishing webelements
 	
- 	@FindBy(xpath="//*[@id='Binding & Finishing']/div[1]/h3")
+ 	@FindBy(xpath="//edl-accordion[@id='Binding & Finishing']/div[1]/h3") //"//*[@id='Binding & Finishing']/div[1]/h3"
  	public WebElement Binding_and_Finishing;
  	
- 	@FindBy(xpath="(//button[@class='accordion-list__button ng-tns-c11-3 ng-star-inserted'])[1]")
- 	public WebElement Binding_and_Finishing_binding_stapling_addbtn;
+ 	//Binding & Stapling
+	@FindBy(xpath="//edl-accordion[@id='Binding & Stapling']//button[contains(text(),' Add ')]")
+  	public WebElement Binding_and_Finishing_binding_stapling_addbtn;
+	@FindBy(xpath="(//edl-radio-button[@class='choice__radio-button']/label/div/div[@class='inner-circle'])[17]")
+	public WebElement Binding_and_Finishing_binding_stapling_StapleRadiobtn;
+	@FindBy(xpath="//input[@id='custom-dropdown-39']")
+	public WebElement Binding_and_Finishing_binding_stapling_drpdown;
+ 	@FindBy(xpath="//button[contains(text(),' Close ')]")
+ 	public WebElement Binding_and_Finishing_binding_stapling_CLOSEbtn;
 	
-	
-	
-	
-	
-	
+	//Binding & FInishing -> Cutting web elements
+ 	@FindBy(xpath="//edl-accordion[@id='Cutting']//button[contains(text(),' Add ')]")
+ 	public WebElement Binding_and_Finishing_binding_Cutting_addbtn;
+ 	@FindBy(xpath="(//label[@class='radio-button-layout no-select'])[66]")
+ 	public WebElement Binding_and_Finishing_binding_Cutting_HalfVerticle;
+ 	@FindBy(xpath="//button[contains(text(),' Close ')]")
+ 	public WebElement Binding_and_Finishing_binding_Cutting_CLOSEbtn;
+ 	
+ 	
+ 	//Binding & FInishing -> Cutting web elements
+ 	@FindBy(xpath="//edl-accordion[@id='Lamination']//button[contains(text(),' Add ')]")
+ 	public WebElement Binding_and_Finishing_binding_lamination_addbtn;
+ 	@FindBy(xpath="//div[contains(text(),'Glossy with No Border')]")
+ 	public WebElement Binding_and_Finishing_binding_lamination_noGLossyBorder;
+ 	@FindBy(xpath="//button[contains(text(),' Close ')]")
+ 	public WebElement Binding_and_Finishing_binding_lamination_CLOSEbtn;
+ 	
+ 	
+ 	//Advanced Options
+ 	//Tabs and BlankSheet
+ 	
+ 	@FindBy(xpath="//edl-accordion[@id='Tabs & Blank Sheets']//h3")
+ 	public WebElement advOptions_tabs_blankSheets;
+ 	@FindBy(xpath="//edl-accordion[@id='Blank Sheets']//button[contains(text(),' Add ')]")
+ 	public WebElement advOptions_tabs_blankSheets_addbtn;
+ 	@FindBy(xpath="(//div[@class='input-group'])[9]")
+ 	public WebElement advOptions_tabs_blankSheets_paperType_drpdown;
+	@FindBy(xpath="//button[contains(text(),' Close ')]")
+ 	public WebElement advOptions_tabs_blankSheets_CLOSEbtn;
 	
 	
 }
