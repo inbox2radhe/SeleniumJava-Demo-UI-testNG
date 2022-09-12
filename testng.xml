@@ -11,7 +11,7 @@
 	       <test thread-count="5" name="Test"  verbose="2" >
 	       <parameter name="Environment" value="Stage2"/>
 <classes> 
-		  <!--
+		 
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpCCFlow"/>
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_PickUpFexAccFlow"/>
 		   <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_uploadFile_From_BannerOfIndexPage_Shipping_FedEx_Priority_Overnight_FedAccFlow"/>
@@ -71,19 +71,28 @@
 	             <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Pickup_CC"/>
 
 	              <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_checkoutUsing_MiniCart_Shipping_FedexAcc"/>
+	            
 	              <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_editMiniCart_Quantity_PickUp_CC"/>
+	               
 	              <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Delete_All_itemsFromMiniCart"/>
+	            
+	         
+	            <!--
                 <class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_pickUP_CCFlow"/>
+                
            		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCards_QuickLinks_Shipping_FedExAccFlow"/>
             	<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_NoteCardsPreminum_QuickLinks_Flow"/> 
+            	-->
+              	
          		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Corrugated_plastic_sign_Pickup_CCflow"/>
         		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Metal_Sign_Pickup_CCflow"/>
         		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Yard_Sign_Pickup_FedExACCflow"/>
-			
-			<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_chengePickupToShipping"/> 
+		 	
+			<!--<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_chengePickupToShipping"/> -->
 		
-		
-		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PostCards_update_Product_Print_properties_Size"/>
+		 
+	<!--	<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_PostCards_update_Product_Print_properties_Size"/>-->
+	
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_AllSize"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_StdWhitePaper"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_ProWhitePaper"/>
@@ -96,9 +105,9 @@
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_BindingandFinishing_Binding"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_BindingandFinishing_Cutting"/>
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_BindingandFinishing_Lamination"/>
-	-->		
+		<!--
 		<class name="com.NonKeyword_FutureReadyFramework.automation.testCases.TC_Manuals_update_Product_Print_properties_AdvOptions_BlankSheets"/>
-		
+		-->
 		
 </classes>
           

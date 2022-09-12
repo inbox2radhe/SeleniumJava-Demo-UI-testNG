@@ -25,6 +25,10 @@ import junit.framework.Assert;
 
 public class ProductCategoryPage extends BaseClass {
 	
+	public static String StageURL="https://Staging.office.fedex.com";
+	public static String Stage2URL="https://Staging2.office.fedex.com";
+	public static String Stage3URL="https://Staging3.office.fedex.com";
+	public static String ProdURL="https://office.fedex.com";
 	
 	public void Manuals_update_Product_Print_properties_AdvOptions_BlankSheets(int row) throws InterruptedException, IOException {
 		
@@ -988,9 +992,9 @@ public class ProductCategoryPage extends BaseClass {
 		clickelement(or.editOrderbtn);
 		shortWaitSync();
 		System.out.println("Print before configurator");
-		
+		stwichingFrame();
 		clickelement(or.ProductPrint_properties);
-		
+		System.out.println("PostCards product Print properties clicked");
 
 		clickelement(or.postCard_ProductPrint_properties_Size);
 		shortWaitSync();
@@ -998,12 +1002,23 @@ public class ProductCategoryPage extends BaseClass {
 		waitSync();
 		clickelement(or.btn_SaveChanges);
 		
+		if(readURL().equalsIgnoreCase(Stage2URL)) {
 		String poductPricePostUpdate= or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+		
 		String productPriceinCart=or.price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
 		
 		Assert.assertEquals(poductPricePostUpdate, productPriceinCart);
 		System.out.println("Product Updated price matching with Product price in cart");
+		}
 		
+		else if(readURL().equalsIgnoreCase(StageURL)) {
+			String poductPricePostUpdate= or.price_afterpostCard_ProductPrint_propertiesUpdate.getText();
+			
+			String productPriceinCart=or.stage_price_afterpostCard_ProductPrint_propertiesUpdate_Incart.getText();
+			
+			Assert.assertEquals(poductPricePostUpdate, productPriceinCart);
+			System.out.println("Product Updated price matching with Product price in cart");
+			}
 		
 		expwaitClickable(or.proceedtocheckout);
 		clickelement(or.proceedtocheckout);
@@ -1132,14 +1147,21 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
+//			clickelement(or.fedexacc_revieworder);// clicking prod order review button
 
 		}
 		expwaitClickable(or.terms_condition_checkbox);
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 
@@ -1315,14 +1337,20 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
 
 		}
 		expwaitClickable(or.terms_condition_checkbox);
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 
@@ -1494,13 +1522,19 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
 
 		}
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 
@@ -1672,13 +1706,19 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
 
 		}
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 
@@ -2257,13 +2297,19 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
 
 		}
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 	}
@@ -2476,13 +2522,19 @@ public class ProductCategoryPage extends BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
 
 		}
 		clickelement(or.terms_condition_checkbox);
 		clickelement(or.submitorder_button);
-		expwaitVisibility(or.ordergtn);
-		System.out.println(or.ordergtn.getText());
+		waitSync();
+//		expwaitVisibility(or.ordergtn);
+//		System.out.println(or.ordergtn.getText());
 
 		tearDown();
 

@@ -52,6 +52,11 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	public static WebDriver driver;
 	public static WebDriverWait wait;
+	
+	public static String StageURL="https://Staging.office.fedex.com";
+	public static String Stage2URL="https://Staging2.office.fedex.com";
+	public static String Stage3URL="https://Staging3.office.fedex.com";
+	public static String ProdURL="https://office.fedex.com";
 
 	
 	public static void launchBrowser() throws IOException {
@@ -125,7 +130,13 @@ public class BaseClass {
 			System.err.println("[ERROR] Unable to launch" + URL + e.toString());
 		}
 	}
-
+	
+		public String readURL() throws IOException {
+			return ExcelUtils.excelreadURL();
+		}
+	
+	
+	
 		public String returnelementTxt(WebElement webelement) {
 		
 		String updatecardtxt= webelement.getText().toString();
@@ -193,7 +204,7 @@ public class BaseClass {
 		waitSync();
 		clickelement(webelement);
 		waitSync();
-		shortWaitSync();
+		waitSync();
 		clickelement(or.uploadbutton);
 		waitSync();
 		int size = driver.findElements(By.tagName("iframe")).size();
@@ -201,7 +212,7 @@ public class BaseClass {
 		System.out.println("Switching to the iframe");
 		driver.switchTo().frame(0);
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
-		upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Manuals_Test_File.pdf");
+		upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Manuals.pdf");
 		waitSync();
 		System.out.println("File is Uploaded Successfully");
 		waitSync();
@@ -230,7 +241,32 @@ public class BaseClass {
 		System.out.println("Switching to the iframe");
 		driver.switchTo().frame(0);
 		WebElement upload = driver.findElement(By.xpath("//input[@type='file']"));
-		upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\01142022payslip.pdf");
+		
+		switch (itemName)
+		{
+		case "Postcards":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Postcards.pdf");
+		break;
+		case "Flyers":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Flyers.pdf");
+		break;
+		case "Brochures":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Brochures.pdf");
+		break;
+		case "Resumes":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Resumes.pdf");
+		break;
+		case "Business Cards":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Business Cards.pdf");
+		break;
+		case "Business Cards - Premium":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Business Cards - Premium.pdf");
+		break;
+		case "Business Cards - Quick":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Business Cards - Quick.pdf");
+		break;
+		case "Outdoor Banners":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Outdoor Banners.pdf");
+		break;
+		case "Manuals":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Manuals.pdf");
+		break;
+		case "Presentations":upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\Presentations.pptx");
+		break;
+		
+		}
+//		upload.sendKeys(path + "\\src\\main\\java\\com\\NonKeyword_FutureReadyFramework\\automation\\config\\01142022payslip.pdf");
 		waitSync();
 		System.out.println("File is Uploaded Successfully");
 		waitSync();
@@ -623,12 +659,19 @@ public class BaseClass {
 			clickelement(or.selectfedexacc);
 			inputtext(or.fedexacc, "653243286"); // 653243286
 			waitSync();
-			clickelement(or.fedexacc_revieworder);// clicking prod order review button
+			if(readURL().equalsIgnoreCase(Stage2URL)) {
+			clickelement(or.stage2_fedexacc_revieworder);// clicking prod order review button
+			}
+			else if(readURL().equalsIgnoreCase(StageURL)) {
+				clickelement(or.stage_fedexacc_revieworder);
+			}
+//			clickelement(or.fedexacc_revieworder);// clicking prod order review button
 
 		}
-//		expwaitClickable(or.terms_condition_checkbox);
-//		clickelement(or.terms_condition_checkbox);
-//		clickelement(or.submitorder_button);
+		expwaitClickable(or.terms_condition_checkbox);
+		clickelement(or.terms_condition_checkbox);
+		clickelement(or.submitorder_button);
+		waitSync();
 //		expwaitVisibility(or.ordergtn);
 //		System.out.println(or.ordergtn.getText());
 

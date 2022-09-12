@@ -139,6 +139,10 @@ public class ObjectRepository_LoginPage {
 	@FindBy(how = How.ID, using = "fedex-account-number")
 	public WebElement fedexacc;
 	@FindBy(xpath = "//button[@class='fedex-account-number-review-button']")
+	public WebElement stage_fedexacc_revieworder;
+	@FindBy(xpath="(//button[contains(text(),'REVIEW ORDER')])[2]")
+	public WebElement stage2_fedexacc_revieworder;
+	@FindBy(xpath="(//button[contains(text(),'REVIEW ORDER')])[1]")
 	public WebElement fedexacc_revieworder;
 	//@FindBy(xpath="//button[@class='credit-card-review-button']")
 	//public WebElement cc_revieworder_Prod;
@@ -254,15 +258,21 @@ public class ObjectRepository_LoginPage {
 
 	
 	//Upload file from Index page and use banner upload button
-			//@FindBy(xpath="//a[@class='pagebuilder-button-primary']")
+	@FindBy(xpath="//a[@class='pagebuilder-button-primary']")
+	public WebElement stage_uploadbtnFromBannerPage;
 	@FindBy(xpath="//div[@class='pagebuilder-poster-content']//button[contains(text(),'UPLOAD & PRINT')]")
-	public WebElement uploadbtnFromBannerPage;
-	
+	public WebElement stge2_uploadbtnFromBannerPage;
 	@FindBy(xpath="(//div[@class='search results']//li[@class='item product product-item']//strong[@class='product name product-item-name']//a[contains(text(),'Flyers')])[1]")
 	public WebElement selectFlyersUsingSearch;
-
 	@FindBy (xpath="//div[@class='products wrapper retail-session grid products-grid']//div[@class='product-item-info']//div[@class='product details product-item-details']//strong[@class='product name product-item-name']//a[contains(text(),'Postcards')]")
 	public WebElement selectPostcardsUsingSearch;
+	@FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Brochures')]")
+	public WebElement selectBrochuresUsingSearch;
+	@FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Business Cards - Quick')]")
+	public WebElement selectBusinessCards_QuickUsingSearch;
+	@FindBy(xpath="//strong[@class='product name product-item-name']//a[contains(text(),'Premium Business Cards')]")
+	public WebElement selectBusinessCards_PremiumUsingSearch;
+	
 	//NDC Account object repo
 	@FindBy(xpath = "//div[@class='fedex-acc-text']")
 	public WebElement ndcAccLabel;
@@ -297,9 +307,13 @@ public class ObjectRepository_LoginPage {
 	// Business- Cards Preminum flow
 
     @FindBy(xpath="(//div[@class='products wrapper retail-session grid products-grid']//li[@class='item product product-item'])[2]")
-    public WebElement businessCards_preminum;
+    public WebElement stage2_businessCards_preminum;
+    @FindBy(xpath="(//div[@class='products wrapper retail-session grid products-grid']//li[@class='item product product-item'])[1]")
+    public WebElement stage_businessCards_preminum;
     @FindBy(xpath="//div[@class='product media sticky']//span[contains(text(),'Business Cards - Premium')]")
-    public WebElement getProductTitle;
+    public WebElement stge2_getProductTitle;
+    @FindBy(xpath="//div[@class='product media sticky']//span[contains(text(),'Premium Business Cards')]")
+    public WebElement stage_getProductTitle;
 
     //Presentations (PPT) flow
 
@@ -367,7 +381,8 @@ public class ObjectRepository_LoginPage {
     
   //Product Category- Quick link flow
 
-    @FindBy(xpath="//div[@class='menu horizontal centre ']//li[@class='menu-dropdown-icon dropdown category-item nav-1828 custom_mega_menu']")
+    //@FindBy(xpath="//div[@class='menu horizontal centre ']//li[@class='menu-dropdown-icon dropdown category-item nav-1828 custom_mega_menu']")
+    @FindBy(xpath="(//div[@class='menu horizontal centre ']//a)[3]")
     public WebElement Business_Career_Essential_lnk;
     @FindBy(xpath="(//strong[@class='product-item-name static-link']//a[@class='product-item-link'])[1]")
     public WebElement Business_Cards;
@@ -429,6 +444,8 @@ public class ObjectRepository_LoginPage {
 	public WebElement price_afterpostCard_ProductPrint_propertiesUpdate;
 	@FindBy(xpath="//td[@class='col price']//span")
 	public WebElement price_afterpostCard_ProductPrint_propertiesUpdate_Incart;
+	@FindBy(xpath="//table[@id='shopping-cart-table']//td[@class='col price']//span")
+	public WebElement stage_price_afterpostCard_ProductPrint_propertiesUpdate_Incart;
 	
 	//Manuals configurator webelement
 	@FindBy(xpath="(//button[contains(text(),'Edit')])[1]")
